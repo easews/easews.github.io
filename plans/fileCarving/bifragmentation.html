@@ -805,10 +805,24 @@ pre.editor-colors .fold-marker:after {
         </head>
         <body class='markdown-preview' data-use-github-style><h1 id="bifragmented-file-content-carving">Bifragmented file content carving</h1>
 <h2 id="overview">Overview</h2>
-<p>Pairs should now form groups, but for the second task pairs will consider and devise an algorithm to <em>carve</em> file content that is bifragmented on a file system.</p>
-<h2 id="materials">Materials</h2>
+<p>Pairs should now form groups, but for the second task pairs will consider and devise an algorithm to <em>carve</em> file content that is <strong>bifragmented</strong> on a file system.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="image" src="images/bifragmentation.png"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Figure 1: File A is an example of a Bifragmented file</td>
+</tr>
+</tbody></table>
+<h3 id="materials">Materials</h3>
 <ul>
-<li>to be complete.</li>
+<li><a href="fileA.html">File A</a></li>
+<li><a href="fileB.html">File B</a></li>
+<li><a href="fileC.html">File C</a></li>
+<li><a href="fileD.html">File D</a></li>
+<li><a href="fileSignatures.html">File Signatures</a></li>
 </ul>
 <h3 id="task-1-preparing-the-file-system">Task 1: Preparing the file system.</h3>
 <p>If pairs have completed Task 1.1, then they can skip to Step 4.</p>
@@ -819,7 +833,7 @@ pre.editor-colors .fold-marker:after {
 </li>
 <li><p>Pairs should then take all the remaining file blocks for each file, ensure they are in sequence and flip them over and write their corresponding number on the back, for example: the second file block for each file should be labelled <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">2</code>, the third <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">3</code> and so and so forth until the penultimate file block for each file.</p>
 </li>
-<li><p>Pairs should then arrange each of the file blocks on the <em>File System Container</em> as illustrated in <strong>Figure 2</strong>. Pairs should place them in the correct sequence and then flip each over so that the file content is visible.</p>
+<li><p>Pairs should then arrange each of the file blocks on the <em>File System Container</em> as illustrated in <strong>Figure 1</strong>. Pairs should place them in the correct sequence and then flip each over so that the file content is visible.</p>
 </li>
 </ol>
 <h3 id="task-2-devising-and-executing-a-file-content-carving-algorithm">Task 2: Devising and executing a file content carving algorithm.</h3>
