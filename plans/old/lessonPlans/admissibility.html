@@ -1,0 +1,1335 @@
+      <!DOCTYPE html>
+      <html>
+        <head>
+            <meta charset="utf-8" />
+            <title>admissibility</title>
+            <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(171, 178, 191); background-color: rgb(40, 44, 52); overflow: auto; }
+.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
+.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
+.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
+.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
+.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) strong { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(124, 135, 156); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(82, 139, 255); }
+.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
+.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(124, 135, 156); border-color: rgb(75, 83, 98); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top: 2px dashed rgb(75, 83, 98); background: none; }
+.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
+.markdown-preview:not([data-use-github-style]) th { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(75, 83, 98); }
+.markdown-preview:not([data-use-github-style]) code { color: rgb(255, 255, 255); background-color: rgb(58, 63, 75); }
+.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(49, 54, 63); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(255, 255, 255); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(75, 83, 98) rgb(75, 83, 98) rgb(62, 68, 81); border-image: initial; background-color: rgb(58, 63, 75); }
+.markdown-preview[data-use-github-style] { font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif; line-height: 1.6; overflow-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); background-color: rgb(255, 255, 255); overflow: scroll; }
+.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border: 0px none; }
+.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left: 4px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
+.markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] table tr { background-color: rgb(255, 255, 255); border-top: 1px solid rgb(204, 204, 204); }
+.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; background-color: rgba(0, 0, 0, 0.04); border-radius: 3px; }
+.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: " "; }
+.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; background: transparent; border: 0px; }
+.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border-radius: 3px; }
+.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview[data-use-github-style] pre { overflow-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; overflow-wrap: normal; background-color: transparent; border: 0px; }
+.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; background-color: rgb(252, 252, 252); border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-image: initial; border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; }
+.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
+.markdown-preview[data-use-github-style] code { color: inherit; }
+.markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.markdown-preview pre.editor-colors { user-select: auto; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors .horizontal-scrollbar { visibility: hidden; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors:hover .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover .horizontal-scrollbar { visibility: visible; }
+.markdown-preview .task-list-item input[type="checkbox"] { position: absolute; margin: 0.25em 0px 0px -1.4em; }
+.markdown-preview .task-list-item { list-style-type: none; }
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+.line-number.bracket-matcher.bracket-matcher {
+  color: #abb2bf;
+  background-color: #3a3f4b;
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+}
+.spell-check-corrections {
+  width: 25em !important;
+}
+
+pre.editor-colors {
+  background-color: #282c34;
+  color: #abb2bf;
+}
+pre.editor-colors .line.cursor-line {
+  background-color: rgba(153, 187, 255, 0.04);
+}
+pre.editor-colors .invisible {
+  color: #abb2bf;
+}
+pre.editor-colors .cursor {
+  border-left: 2px solid #528bff;
+}
+pre.editor-colors .selection .region {
+  background-color: #3e4451;
+}
+pre.editor-colors .bracket-matcher .region {
+  border-bottom: 1px solid #528bff;
+  box-sizing: border-box;
+}
+pre.editor-colors .invisible-character {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .indent-guide {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .wrap-guide {
+  background-color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .find-result .region.region.region,
+pre.editor-colors .current-result .region.region.region {
+  border-radius: 2px;
+  background-color: rgba(82, 139, 255, 0.24);
+  transition: border-color 0.4s;
+}
+pre.editor-colors .find-result .region.region.region {
+  border: 2px solid transparent;
+}
+pre.editor-colors .current-result .region.region.region {
+  border: 2px solid #528bff;
+  transition-duration: .1s;
+}
+pre.editor-colors .gutter .line-number {
+  color: #636d83;
+  -webkit-font-smoothing: antialiased;
+}
+pre.editor-colors .gutter .line-number.cursor-line {
+  color: #abb2bf;
+  background-color: #3a3f4b;
+}
+pre.editor-colors .gutter .line-number.cursor-line-no-selection {
+  background-color: transparent;
+}
+pre.editor-colors .gutter .line-number .icon-right {
+  color: #abb2bf;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before {
+  bottom: -3px;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 25px;
+  border-bottom: 1px dotted rgba(224, 82, 82, 0.5);
+  pointer-events: none;
+}
+pre.editor-colors .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+pre.editor-colors .fold-marker:after {
+  color: #abb2bf;
+}
+.syntax--comment {
+  color: #5c6370;
+  font-style: italic;
+}
+.syntax--comment .syntax--markup.syntax--link {
+  color: #5c6370;
+}
+.syntax--entity.syntax--name.syntax--type {
+  color: #e5c07b;
+}
+.syntax--entity.syntax--other.syntax--inherited-class {
+  color: #e5c07b;
+}
+.syntax--keyword {
+  color: #c678dd;
+}
+.syntax--keyword.syntax--control {
+  color: #c678dd;
+}
+.syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--keyword.syntax--other.syntax--special-method {
+  color: #61afef;
+}
+.syntax--keyword.syntax--other.syntax--unit {
+  color: #d19a66;
+}
+.syntax--storage {
+  color: #c678dd;
+}
+.syntax--storage.syntax--type.syntax--annotation,
+.syntax--storage.syntax--type.syntax--primitive {
+  color: #c678dd;
+}
+.syntax--storage.syntax--modifier.syntax--package,
+.syntax--storage.syntax--modifier.syntax--import {
+  color: #abb2bf;
+}
+.syntax--constant {
+  color: #d19a66;
+}
+.syntax--constant.syntax--variable {
+  color: #d19a66;
+}
+.syntax--constant.syntax--character.syntax--escape {
+  color: #56b6c2;
+}
+.syntax--constant.syntax--numeric {
+  color: #d19a66;
+}
+.syntax--constant.syntax--other.syntax--color {
+  color: #56b6c2;
+}
+.syntax--constant.syntax--other.syntax--symbol {
+  color: #56b6c2;
+}
+.syntax--variable {
+  color: #e06c75;
+}
+.syntax--variable.syntax--interpolation {
+  color: #be5046;
+}
+.syntax--variable.syntax--parameter {
+  color: #abb2bf;
+}
+.syntax--string {
+  color: #98c379;
+}
+.syntax--string > .syntax--source,
+.syntax--string .syntax--embedded {
+  color: #abb2bf;
+}
+.syntax--string.syntax--regexp {
+  color: #56b6c2;
+}
+.syntax--string.syntax--regexp .syntax--source.syntax--ruby.syntax--embedded {
+  color: #e5c07b;
+}
+.syntax--string.syntax--other.syntax--link {
+  color: #e06c75;
+}
+.syntax--punctuation.syntax--definition.syntax--comment {
+  color: #5c6370;
+}
+.syntax--punctuation.syntax--definition.syntax--method-parameters,
+.syntax--punctuation.syntax--definition.syntax--function-parameters,
+.syntax--punctuation.syntax--definition.syntax--parameters,
+.syntax--punctuation.syntax--definition.syntax--separator,
+.syntax--punctuation.syntax--definition.syntax--seperator,
+.syntax--punctuation.syntax--definition.syntax--array {
+  color: #abb2bf;
+}
+.syntax--punctuation.syntax--definition.syntax--heading,
+.syntax--punctuation.syntax--definition.syntax--identity {
+  color: #61afef;
+}
+.syntax--punctuation.syntax--definition.syntax--bold {
+  color: #e5c07b;
+  font-weight: bold;
+}
+.syntax--punctuation.syntax--definition.syntax--italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.syntax--punctuation.syntax--section.syntax--embedded {
+  color: #be5046;
+}
+.syntax--punctuation.syntax--section.syntax--method,
+.syntax--punctuation.syntax--section.syntax--class,
+.syntax--punctuation.syntax--section.syntax--inner-class {
+  color: #abb2bf;
+}
+.syntax--support.syntax--class {
+  color: #e5c07b;
+}
+.syntax--support.syntax--type {
+  color: #56b6c2;
+}
+.syntax--support.syntax--function {
+  color: #56b6c2;
+}
+.syntax--support.syntax--function.syntax--any-method {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--function {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--class,
+.syntax--entity.syntax--name.syntax--type.syntax--class {
+  color: #e5c07b;
+}
+.syntax--entity.syntax--name.syntax--section {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--tag {
+  color: #e06c75;
+}
+.syntax--entity.syntax--other.syntax--attribute-name {
+  color: #d19a66;
+}
+.syntax--entity.syntax--other.syntax--attribute-name.syntax--id {
+  color: #61afef;
+}
+.syntax--meta.syntax--class {
+  color: #e5c07b;
+}
+.syntax--meta.syntax--class.syntax--body {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--method-call,
+.syntax--meta.syntax--method {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--definition.syntax--variable {
+  color: #e06c75;
+}
+.syntax--meta.syntax--link {
+  color: #d19a66;
+}
+.syntax--meta.syntax--require {
+  color: #61afef;
+}
+.syntax--meta.syntax--selector {
+  color: #c678dd;
+}
+.syntax--meta.syntax--separator {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--tag {
+  color: #abb2bf;
+}
+.syntax--underline {
+  text-decoration: underline;
+}
+.syntax--none {
+  color: #abb2bf;
+}
+.syntax--invalid.syntax--deprecated {
+  color: #523d14 !important;
+  background-color: #e0c285 !important;
+}
+.syntax--invalid.syntax--illegal {
+  color: white !important;
+  background-color: #e05252 !important;
+}
+.syntax--markup.syntax--bold {
+  color: #d19a66;
+  font-weight: bold;
+}
+.syntax--markup.syntax--changed {
+  color: #c678dd;
+}
+.syntax--markup.syntax--deleted {
+  color: #e06c75;
+}
+.syntax--markup.syntax--italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.syntax--markup.syntax--heading {
+  color: #e06c75;
+}
+.syntax--markup.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
+  color: #61afef;
+}
+.syntax--markup.syntax--link {
+  color: #56b6c2;
+}
+.syntax--markup.syntax--inserted {
+  color: #98c379;
+}
+.syntax--markup.syntax--quote {
+  color: #d19a66;
+}
+.syntax--markup.syntax--raw {
+  color: #98c379;
+}
+.syntax--source.syntax--cs .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--css .syntax--property-name,
+.syntax--source.syntax--css .syntax--property-value {
+  color: #828997;
+}
+.syntax--source.syntax--css .syntax--property-name.syntax--support,
+.syntax--source.syntax--css .syntax--property-value.syntax--support {
+  color: #abb2bf;
+}
+.syntax--source.syntax--elixir .syntax--source.syntax--embedded.syntax--source {
+  color: #abb2bf;
+}
+.syntax--source.syntax--elixir .syntax--constant.syntax--language,
+.syntax--source.syntax--elixir .syntax--constant.syntax--numeric,
+.syntax--source.syntax--elixir .syntax--constant.syntax--definition {
+  color: #61afef;
+}
+.syntax--source.syntax--elixir .syntax--variable.syntax--definition,
+.syntax--source.syntax--elixir .syntax--variable.syntax--anonymous {
+  color: #c678dd;
+}
+.syntax--source.syntax--elixir .syntax--parameter.syntax--variable.syntax--function {
+  color: #d19a66;
+  font-style: italic;
+}
+.syntax--source.syntax--elixir .syntax--quoted {
+  color: #98c379;
+}
+.syntax--source.syntax--elixir .syntax--keyword.syntax--special-method,
+.syntax--source.syntax--elixir .syntax--embedded.syntax--section,
+.syntax--source.syntax--elixir .syntax--embedded.syntax--source.syntax--empty {
+  color: #e06c75;
+}
+.syntax--source.syntax--elixir .syntax--readwrite.syntax--module .syntax--punctuation {
+  color: #e06c75;
+}
+.syntax--source.syntax--elixir .syntax--regexp.syntax--section,
+.syntax--source.syntax--elixir .syntax--regexp.syntax--string {
+  color: #be5046;
+}
+.syntax--source.syntax--elixir .syntax--separator,
+.syntax--source.syntax--elixir .syntax--keyword.syntax--operator {
+  color: #d19a66;
+}
+.syntax--source.syntax--elixir .syntax--variable.syntax--constant {
+  color: #e5c07b;
+}
+.syntax--source.syntax--elixir .syntax--array,
+.syntax--source.syntax--elixir .syntax--scope,
+.syntax--source.syntax--elixir .syntax--section {
+  color: #828997;
+}
+.syntax--source.syntax--gfm .syntax--markup {
+  -webkit-font-smoothing: auto;
+}
+.syntax--source.syntax--gfm .syntax--link .syntax--entity {
+  color: #61afef;
+}
+.syntax--source.syntax--ini .syntax--keyword.syntax--other.syntax--definition.syntax--ini {
+  color: #e06c75;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--modifier.syntax--import {
+  color: #e5c07b;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--type {
+  color: #e5c07b;
+}
+.syntax--source.syntax--java .syntax--keyword.syntax--operator.syntax--instanceof {
+  color: #c678dd;
+}
+.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair {
+  color: #e06c75;
+}
+.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair > .syntax--punctuation {
+  color: #abb2bf;
+}
+.syntax--source.syntax--ts .syntax--keyword.syntax--operator {
+  color: #56b6c2;
+}
+.syntax--source.syntax--flow .syntax--keyword.syntax--operator {
+  color: #56b6c2;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json {
+  color: #e06c75;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation.syntax--string {
+  color: #e06c75;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation {
+  color: #98c379;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--constant.syntax--language.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--constant.syntax--language.syntax--json {
+  color: #56b6c2;
+}
+.syntax--ng.syntax--interpolation {
+  color: #e06c75;
+}
+.syntax--ng.syntax--interpolation.syntax--begin,
+.syntax--ng.syntax--interpolation.syntax--end {
+  color: #61afef;
+}
+.syntax--ng.syntax--interpolation .syntax--function {
+  color: #e06c75;
+}
+.syntax--ng.syntax--interpolation .syntax--function.syntax--begin,
+.syntax--ng.syntax--interpolation .syntax--function.syntax--end {
+  color: #61afef;
+}
+.syntax--ng.syntax--interpolation .syntax--bool {
+  color: #d19a66;
+}
+.syntax--ng.syntax--interpolation .syntax--bracket {
+  color: #abb2bf;
+}
+.syntax--ng.syntax--pipe,
+.syntax--ng.syntax--operator {
+  color: #abb2bf;
+}
+.syntax--ng.syntax--tag {
+  color: #56b6c2;
+}
+.syntax--ng.syntax--attribute-with-value .syntax--attribute-name {
+  color: #e5c07b;
+}
+.syntax--ng.syntax--attribute-with-value .syntax--string {
+  color: #c678dd;
+}
+.syntax--ng.syntax--attribute-with-value .syntax--string.syntax--begin,
+.syntax--ng.syntax--attribute-with-value .syntax--string.syntax--end {
+  color: #abb2bf;
+}
+.syntax--source.syntax--php .syntax--class.syntax--bracket {
+  color: #abb2bf;
+}
+/*
+   This defines styling rules for syntax classes.
+
+   See the naming conventions for a list of syntax classes:
+   https://flight-manual.atom.io/hacking-atom/sections/syntax-naming-conventions
+
+   When styling rules conflict:
+   - The last rule overrides previous rules.
+   - The rule with most classes and pseudo-classes overrides the last rule.
+*/
+.syntax--keyword {
+  color: #c678dd;
+}
+.syntax--keyword.syntax--type {
+  color: #56b6c2;
+}
+.syntax--keyword.syntax--function {
+  color: #e06c75;
+}
+.syntax--keyword.syntax--variable {
+  color: #e06c75;
+}
+.syntax--entity {
+  color: #abb2bf;
+}
+.syntax--entity.syntax--parameter {
+  color: #abb2bf;
+}
+.syntax--entity.syntax--support {
+  color: #e06c75;
+}
+.syntax--entity.syntax--decorator:last-child {
+  color: #61afef;
+}
+.syntax--entity.syntax--label {
+  text-decoration: underline;
+}
+.syntax--entity.syntax--function {
+  color: #61afef;
+}
+.syntax--entity.syntax--operator {
+  color: #61afef;
+}
+.syntax--entity.syntax--operator.syntax--symbolic {
+  color: #abb2bf;
+}
+.syntax--entity.syntax--type {
+  color: #56b6c2;
+}
+.syntax--entity.syntax--tag {
+  color: #e06c75;
+}
+.syntax--entity.syntax--attribute {
+  color: #d19a66;
+}
+.syntax--punctuation {
+  color: #abb2bf;
+}
+.syntax--punctuation.syntax--accessor {
+  color: #abb2bf;
+}
+.syntax--punctuation.syntax--accessor.syntax--member,
+.syntax--punctuation.syntax--accessor.syntax--scope {
+  color: #c678dd;
+}
+.syntax--punctuation.syntax--embedded {
+  color: #c678dd;
+}
+.syntax--string {
+  color: #98c379;
+}
+.syntax--string.syntax--immutable {
+  color: #98c379;
+}
+.syntax--string.syntax--part {
+  color: #56b6c2;
+}
+.syntax--string.syntax--interpolation {
+  color: #c678dd;
+}
+.syntax--string.syntax--regexp {
+  color: #98c379;
+}
+.syntax--string.syntax--regexp.syntax--language {
+  color: #c678dd;
+}
+.syntax--string.syntax--regexp.syntax--variable {
+  color: #61afef;
+}
+.syntax--string.syntax--regexp.syntax--punctuation {
+  color: #c678dd;
+}
+.syntax--constant {
+  color: #d19a66;
+}
+.syntax--constant.syntax--character {
+  color: #98c379;
+}
+.syntax--constant.syntax--character.syntax--escape {
+  color: #98c379;
+}
+.syntax--constant.syntax--character.syntax--code {
+  color: #56b6c2;
+}
+.syntax--text {
+  color: #abb2bf;
+}
+.syntax--markup.syntax--heading {
+  color: #e06c75;
+}
+.syntax--markup.syntax--list.syntax--punctuation {
+  color: #e06c75;
+}
+.syntax--markup.syntax--quote {
+  color: #5c6370;
+  font-style: italic;
+}
+.syntax--markup.syntax--bold {
+  color: #d19a66;
+  font-weight: bold;
+}
+.syntax--markup.syntax--italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.syntax--markup.syntax--underline {
+  color: #56b6c2;
+  text-decoration: underline;
+}
+.syntax--markup.syntax--strike {
+  color: #e06c75;
+}
+.syntax--markup.syntax--raw {
+  color: #98c379;
+}
+.syntax--markup.syntax--link {
+  color: #56b6c2;
+}
+.syntax--markup.syntax--alt {
+  color: #61afef;
+}
+.syntax--markup.syntax--inserted {
+  color: #98c379;
+}
+.syntax--markup.syntax--inserted .syntax--punctuation {
+  color: #98c379;
+}
+.syntax--markup.syntax--highlighted {
+  color: #98c379;
+}
+.syntax--markup.syntax--highlighted .syntax--punctuation {
+  color: #98c379;
+}
+.syntax--markup.syntax--deleted {
+  color: #e06c75;
+}
+.syntax--markup.syntax--deleted .syntax--punctuation {
+  color: #e06c75;
+}
+.syntax--markup.syntax--changed {
+  color: #c678dd;
+}
+.syntax--markup.syntax--changed .syntax--punctuation {
+  color: #c678dd;
+}
+.syntax--markup.syntax--commented {
+  color: #5c6370;
+}
+.syntax--markup.syntax--commented .syntax--punctuation {
+  color: #5c6370;
+}
+.syntax--comment {
+  color: #5c6370;
+  font-style: italic;
+}
+.syntax--comment.syntax--caption {
+  color: #6a7181;
+  font-weight: bold;
+}
+.syntax--comment.syntax--term {
+  color: #707989;
+}
+.syntax--comment.syntax--punctuation {
+  color: #5c6370;
+  font-weight: normal;
+}
+.syntax--invalid:not(.syntax--punctuation).syntax--illegal {
+  color: white !important;
+  background-color: #e05252 !important;
+}
+.syntax--invalid:not(.syntax--punctuation).syntax--deprecated {
+  color: #523d14 !important;
+  background-color: #e0c285 !important;
+}
+.syntax--source.syntax--css .syntax--entity.syntax--function {
+  color: #828997;
+}
+.syntax--source.syntax--css .syntax--entity.syntax--function.syntax--support {
+  color: #56b6c2;
+}
+.syntax--source.syntax--css .syntax--entity.syntax--selector {
+  color: #d19a66;
+}
+.syntax--source.syntax--css .syntax--entity.syntax--selector.syntax--tag {
+  color: #e06c75;
+}
+.syntax--source.syntax--css .syntax--entity.syntax--selector.syntax--id {
+  color: #61afef;
+}
+.syntax--source.syntax--css .syntax--entity.syntax--property {
+  color: #828997;
+}
+.syntax--source.syntax--css .syntax--entity.syntax--property.syntax--support {
+  color: #abb2bf;
+}
+.syntax--source.syntax--css .syntax--entity.syntax--variable {
+  color: #e06c75;
+}
+.syntax--source.syntax--css .syntax--constant {
+  color: #828997;
+}
+.syntax--source.syntax--css .syntax--constant.syntax--support {
+  color: #abb2bf;
+}
+.syntax--source.syntax--css .syntax--constant.syntax--numeric {
+  color: #d19a66;
+}
+.syntax--source.syntax--css .syntax--constant.syntax--media {
+  color: #d19a66;
+}
+.syntax--source.syntax--css .syntax--constant.syntax--color {
+  color: #d19a66;
+}
+.syntax--source.syntax--css .syntax--constant.syntax--offset {
+  color: #abb2bf;
+}
+.syntax--source.syntax--css .syntax--constant.syntax--attribute-value {
+  color: #98c379;
+}
+.syntax--source.syntax--css .syntax--punctuation.syntax--selector {
+  color: #d19a66;
+}
+.syntax--source.syntax--css .syntax--punctuation.syntax--selector.syntax--wildcard {
+  color: #e06c75;
+}
+.syntax--source.syntax--css .syntax--punctuation.syntax--selector.syntax--id {
+  color: #61afef;
+}
+.syntax--source.syntax--css .syntax--punctuation.syntax--selector.syntax--attribute {
+  color: #abb2bf;
+}
+</style>
+        </head>
+        <body class='markdown-preview' data-use-github-style><h1 id="admissibility-of-evidence">Admissibility of Evidence</h1>
+<p>The lesson plan considers the admissibility of evidence and the significant role the judge plays as gatekeeper and the role of investigators in supporting them in that role. The activity plan supports individuals in developing understanding and awareness around <strong>handling evidence</strong> and consideration of <strong>expert evidence</strong>.</p>
+<blockquote>
+<p>Digital forensic techniques are also applied in a much broader range of inquiries, such as internal corporate investigations, that often do not result in formal proceedings in public court. Despite the fact that investigations may not require the same standard of proof, forensic analysts should always follow sound forensic practices in collecting and analysing the artifacts. This includes adherence to any judicial requirements when working with inherently personal data, which can be a non-trivial concern when the investigation is multi-jurisdictional. In such cases, it is important to seek timely legal advice to preserve the integrity of the inquiry.
+<a href="https://www.cybok.org/media/downloads/Forensics_v1.0.1.pdf">CyBOK Forensic Knowledge Area. Pg 5.</a></p>
+</blockquote>
+<h2 id="aims-outcomes-and-opportunities">Aims, outcomes and opportunities</h2>
+<p>The aim, intended learning outcomes and skills of the session are highlighted and discussed with learners. The aim of this session is for students to consider the significance and importance of handling evidence and the consideration of expert evidence.</p>
+<h3 id="aims">Aims</h3>
+<p>The expectation is that by the end of this activity, individuals will be able to:</p>
+<h3 id="intended-learning-outcomes">Intended Learning Outcomes</h3>
+<p>The expectation is that by the end of this activity, individuals will be able to:</p>
+<ol>
+<li><p>understand the cross jurisdictional nature of investigations involving cyber systems.</p>
+</li>
+<li><p>admissibility of evidence in the context of a court room and how that can be undermined by actions performed during an investigation.</p>
+</li>
+<li><p>appreciation of the challenge of admitting expert evidence and the different approaches.</p>
+</li>
+</ol>
+<h3 id="skills-development">Skills development</h3>
+<p>The expectation is that this activity will afford the following skills development opportunities:</p>
+<ul>
+<li><p>investigation skills in terms of pursuing new knowledge and information as they identify existing cases.</p>
+</li>
+<li><p>collaboration in working with others to understand their perspectives and views in developing deeper insight into concepts.</p>
+</li>
+<li><p>communication skills in terms of communicating discovered case study and relevant points.</p>
+</li>
+</ul>
+<h2 id="lesson-plan-structure">Lesson Plan structure</h2>
+<ol>
+<li><a href="#gatekeeper-of-the-court">Gatekeeper of the Court</a></li>
+<li><a href="#expert-evidence">Expert Evidence</a></li>
+<li><a href="#handling-evidence">Handling Evidence</a></li>
+<li><a href="#admissibility-of-evidence">Admissibility of Evidence</a></li>
+</ol>
+<hr>
+<h2 id="gatekeeper-of-the-court">Gatekeeper of the Court</h2>
+<ul>
+<li><a href="#admissibility">Admissibility</a></li>
+<li><a href="#friend-flummox">Friend Flummox</a></li>
+</ul>
+<h3 id="admissibility">Admissibility</h3>
+<p>The session begins with a brief lecture on the significant concepts of admissibility of evidence, in terms of the challenges it represents to digital investigations.</p>
+<p>Learners will use this material as well as consideration of cases to appreciate the challenges around expert evidence and handling evidence.</p>
+<h4 id="instructions">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li><p>Present admissibility lecturette or provide in advance for students to consider.</p>
+</li>
+<li><p>Permit time for questions to address any misconceptions or issues with the material presented.</p>
+</li>
+</ol>
+<h3 id="friend-flummox">Friend Flummox</h3>
+<p>An engaging activity to motivate learners to engage with the admissibility of evidence material. Learners are required to devise an exam question that will challenge a peer in the class on the topic of admissible evidence.</p>
+<p>The goal of the activity is to focus individuals and to generate curiosity as well as to provide an opportunity for learners to develop interpersonal and communication skills.</p>
+<h4 id="instructions-1">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li><p>Advise class that they are required to create an exam question that probes understanding of admissible evidence but also challenges their peers. Learners can be as creative as they want in design of the question, for example they do not need to restrict themselves to text.</p>
+</li>
+<li><p>Give the learners around ten minutes to create the question but will want to ensure energy in the room by walking through the class and advise when time is running out.</p>
+</li>
+<li><p>Then instruct learners to form pairs or trios and exchange their exam questions. The pairs or trios then have 10 minutes to tackle the question. The questions do not need to be in exam conditions, learners can have fun and help each other out.</p>
+</li>
+<li><p>Collect all the exam questions from the learners.</p>
+</li>
+</ol>
+<h4 id="materials">Materials</h4>
+<ul>
+<li><a href="">Activity Sheet</a></li>
+</ul>
+<h3 id="themes-from-friend-flummox-activity">Themes from Friend Flummox Activity</h3>
+<p>The aim of the prior activity is to drive curiosity and interest in the challenge of admissible evidence. The lecturer should now focus the class by considering the themes of that emerged in the exam questions and steer them to areas of focus.</p>
+<h4 id="instructions-2">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li><p>Ask learners to nominate any particular good exam questions. Nominators should present the exam question to the class and state the advantages of the approach.</p>
+</li>
+<li><p>Open the question to the class and ask them to comment on the question and how they would approach it.</p>
+</li>
+<li><p>Repeat process until a number of questions have been considered. Open an audience response system activity, such as <a href="https://www.mentimeter.com">Mentimeter</a>, ask students to submit some of the themes that emerge from these questions in terms of areas of focus.</p>
+</li>
+<li><p>Steer the consideration of themes along the significant of the <em>judge as gatekeeper</em> and how <em>digital investigators can support the judge in that role</em>.</p>
+</li>
+</ol>
+<h3 id="supporting-the-gatekeeper">Supporting the Gatekeeper</h3>
+<p>The block should conclude with the important role that guidelines can support the admissibility of evidence into court. Guidelines for judges and guidelines for digital investigators. The remainder of the active lesson plan will focus on learners devising such guidelines before considering those that have already been established.</p>
+<h4 id="instructions-3">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li><p>Present importance of guidelines lecturette or provide in advance for students to consider.</p>
+</li>
+<li><p>Permit time for questions to address any misconceptions or issues with the material presented.</p>
+</li>
+</ol>
+<hr>
+<h2 id="expert-evidence">Expert Evidence</h2>
+<ul>
+<li><a href="#produce-summary-of-case-study">Produce Summary of Case Study</a></li>
+<li><a href="#overview-of-case">Overview of Case</a></li>
+<li><a href="#considering-the-expert-evidence-from-detective-mark-lounsbury">Considering the Expert Evidence from Detective Mark Lounsbury</a></li>
+<li><a href="#considering-the-expert-evidence-from-bob-hartz">Considering the Expert Evidence from Bob Hartz</a></li>
+<li><a href="#considering-the-competency-of-members-of-the-court">Considering the Competency of Members of the Court</a></li>
+<li><a href="#generating-guidelines-for-courts-to-admit-expert-evidence">Generating guidelines for courts to admit expert evidence</a></li>
+<li><a href="#presentation-to-class">Presentation to Class</a></li>
+<li><a href="#identify-emerging-themes-in-guidelines">Identify Emerging Themes in Guidelines</a></li>
+<li><a href="#discussing-emering-themes-in-guidelines">Discussing Emering Themes in Guidelines</a></li>
+<li><a href="#themes-in-guidelines-and-established-guidelines">Themes in Guidelines and Established Guidelines</a></li>
+</ul>
+<h3 id="produce-summary-of-case-study">Produce Summary of Case Study</h3>
+<p>The lecturer or instructor should advise learners in advance that they are required to complete an entry ticket activity for the lesson.</p>
+<h4 id="materials-1">Materials</h4>
+<ul>
+<li><a href="../legalConcerns/expertEvidence/produceSummary.html">Activity Sheet</a></li>
+</ul>
+<h3 id="overview-of-case">Overview of Case</h3>
+<p>The lecturer or instructor should provide a brief summary of the <em>State of Connecticut v. Julie Amero</em> case to the class.</p>
+<p>The motivation for providing the overview is:</p>
+<ul>
+<li><p>address any misconceptions or gaps in understanding that students may have developed when considering the case in advance.</p>
+</li>
+<li><p>support those students that have no adequately considered the case in advance as to ensure they can effectively contribute to the activity.</p>
+</li>
+</ul>
+<h3 id="considering-the-expert-evidence-from-detective-mark-lounsbury">Considering the Expert Evidence from Detective Mark Lounsbury</h3>
+<p>Pairs of learners are to consider the case and expert testimony to consider if there are any ground for appeal. The activity acts as the first step in learners considering what it is to be an expert and when expert evidence should be admitted and on what grounds.</p>
+<h4 id="instructions-4">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li><p>Issue the activity sheet that will guide and support the learners.</p>
+</li>
+<li><p>Advise learners they have to self-organise into pairs and are going to consider the <em>State of Connecticut v. Julie Amero</em> case and court transcript from Detective Mark Lounsbury.</p>
+</li>
+<li><p>Pairs are to determine whether there could be grounds for an appeal based on the quality and accuracy of the expert testimony.</p>
+</li>
+<li><p>Permit pairs specific time to consider their summary and transcript snippets to determine if there are grounds for appeal.</p>
+</li>
+<li><p>Permit pairs specific time to produce a 100 word judgement and this will support them in subsquent activities. Advise pairs they should consider specific aspects when reaching their judgement, specifically: <em>establishing intent to access website</em> <em>accuracy of expert testimony</em> and <em>alternative explanations or positions</em>.</p>
+</li>
+<li><p>As pairs consider and document their judgement, the lectuer should wander between them and address any questions or gaps in understanding.</p>
+</li>
+</ol>
+<h4 id="materials-2">Materials</h4>
+<ul>
+<li><a href="../legalConcerns/expertEvidence/links.html">Activity Sheet</a></li>
+<li>State of Connecticut v. Julie Amero case</li>
+<li>250-word summary (produced in advance by learner).</li>
+<li>Detective Mark Lounsbury Transcript.</li>
+</ul>
+<h3 id="considering-the-expert-evidence-from-bob-hartz">Considering the Expert Evidence from Bob Hartz</h3>
+<p>Pairs of learners are to consider the case and expert testimony to consider if there are any ground for appeal on the basis of the second expert. The activity acts as the second step in learners considering what it is to be an expert and when expert evidence should be admitted and on what grounds.</p>
+<h4 id="instructions-5">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li><p>Issue the activity sheet that will guide and support the learners.</p>
+</li>
+<li><p>Advise learners they have to self-organise into pairs and are going to consider the <em>State of Connecticut v. Julie Amero</em> case and court transcript from Bob Hartz.</p>
+</li>
+<li><p>Pairs are to determine whether there could be grounds for an appeal based on the quality and accuracy of the expert testimony.</p>
+</li>
+<li><p>Permit pairs specific time to consider their summary and transcript snippets to determine if there are grounds for appeal.</p>
+</li>
+<li><p>Permit pairs specific time to produce a 100 word judgement and this will support them in subsquent activities. Advise pairs they should consider specific aspects when reaching their judgement, specifically: <em>mousetrapping</em>, <em>spyware and malware</em> and <em>quality of testimony</em>.</p>
+</li>
+<li><p>As pairs consider and document their judgement, the lectuer should wander between them and address any questions or gaps in understanding.</p>
+</li>
+</ol>
+<h4 id="materials-3">Materials</h4>
+<ul>
+<li><a href="../legalConcerns/expertEvidence/mousetrapping.html">Activity Sheet</a></li>
+<li>State of Connecticut v. Julie Amero case</li>
+<li>250-word summary (produced in advance by learner).</li>
+<li>Bob Hartz Testimony.</li>
+</ul>
+<h3 id="considering-the-competency-of-members-of-the-court">Considering the Competency of Members of the Court</h3>
+<p>Pairs of learners are to consider the case and expert testimony to consider if there are any ground for appeal on the basis of how different members of the court behaved during the case. The activity acts as the third step in learners considering what it is to be an expert and when expert evidence should be admitted and on what grounds.</p>
+<h4 id="instructions-6">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li><p>Issue the activity sheet that will guide and support the learners.</p>
+</li>
+<li><p>Advise learners they have to self-organise into pairs and are going to consider the <em>State of Connecticut v. Julie Amero</em> case and court transcript from members of the court.</p>
+</li>
+<li><p>Pairs are to determine whether there could be grounds for an appeal based on the quality and accuracy of the expert testimony.</p>
+</li>
+<li><p>Permit pairs specific time to consider their summary and transcript snippets to determine if there are grounds for appeal.</p>
+</li>
+<li><p>Permit pairs specific time to produce a 100 word judgement and this will support them in subsquent activities. Advise pairs they should consider specific aspects when reaching their judgement, specifically: <em>literacy</em>, <em>presentation of digital evidence</em> and <em>scrutiny</em>.</p>
+</li>
+<li><p>As pairs consider and document their judgement, the lectuer should wander between them and address any questions or gaps in understanding.</p>
+</li>
+</ol>
+<h4 id="materials-4">Materials</h4>
+<ul>
+<li><a href="../legalConcerns/expertEvidence/courtMembers.html">Activity Sheet</a></li>
+<li>State of Connecticut v. Julie Amero case</li>
+<li>250-word summary (produced in advance by learner).</li>
+<li>Court transcript.</li>
+</ul>
+<h3 id="generating-guidelines-for-courts-to-admit-expert-evidence">Generating guidelines for courts to admit expert evidence</h3>
+<p>Pairs should form start-up firms of no more than <strong>FOUR</strong> members and exchange summaries, summary positions adopted from consideration of prior expert testimony and behaviour of members of the court. The firms are expected to produce guidelines that would support judges in admitting expert evidence to court. Firms will then present their guidelines to the class for further discussion.</p>
+<h4 id="instructions-7">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li><p>Issue the activity sheet that will guide and support the learners.</p>
+</li>
+<li><p>Advise learners they are going to consider the <em>State of Connecticut v. Julie Amero case</em> case, overall handling of evidence and that they are going to generate no more than <strong>FOUR</strong> guidelines that support judges in admitting expert evidence.</p>
+</li>
+<li><p>Advise pairs to self-organise into teams, exchange summaries and judgements from previous activities.</p>
+</li>
+<li><p>Permit teams time to discuss and consider their summaries, judgements from previous activities.</p>
+</li>
+<li><p>Instruct teams to generate <strong>ONE</strong> presentation slide that succinctly outlines each of the guidelines as well as brief rationale for each.</p>
+</li>
+<li><p>As teams consider and document their judgement, the lectuer should wander between them and address any questions or gaps in understanding.</p>
+</li>
+<li><p>Advise teams to upload slide to the virtual learning environment (VLE) when time has elasped.</p>
+</li>
+</ol>
+<h4 id="materials-5">Materials</h4>
+<ul>
+<li><a href="../legalConcerns/expertEvidence/rulesForAdmittingExpertEvidence.html">Activity Sheet</a></li>
+<li>State of Connecticut v. Julie Amero case.</li>
+<li>250-word summary (produced in advance by learner).</li>
+<li>Summary position adopted for Detective Mark Lounsbury (outcome of prior activity).</li>
+<li>Summary position adopted for Bob Hartz (outcome of prior activity).</li>
+<li>Summary position adopted for Court Members (outcome of prior activity).</li>
+</ul>
+<h3 id="presentation-to-class">Presentation to Class</h3>
+<p>The class will learn about the different guidelines that learners have produced to support in the process of admitting evidence to court. The class should take notes during the session to support a subsquent activity in identifying emerging themes.</p>
+<h4 id="instructions-8">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li><p>Prepare the presentations taken from the virtual learning environment and produce a running order and advise to student in advance.</p>
+</li>
+<li><p>Advise teams they have five minutes to give their presentation. The team will be given a one minute warning and will be clapped off at the end of their allocated time. Teams should also be advised they will not be expected to take questions but may be called upon in subsequent activities and discussions.</p>
+</li>
+<li><p>Advise teams that they all have to speak and to consider how they will pass between members efficiently.</p>
+</li>
+<li><p>Advise teams that presentation slide decks will be made available after the session, but they should still take notes to support a subsequent activity.</p>
+</li>
+<li><p>Use a stopwatch and commence the presentations with teams.</p>
+</li>
+</ol>
+<h4 id="materials-6">Materials</h4>
+<ul>
+<li><a href="../legalConcerns/expertEvidence/presentationToClass.html">Activity Sheet</a></li>
+</ul>
+<h3 id="identify-emerging-themes-in-guidelines">Identify Emerging Themes in Guidelines</h3>
+<p>Teams of learners will use their collective notes, their own research and other presentations from teams to identify themes and divergences in guidelines to support the admission of expert evidence.</p>
+<h4 id="instructions-9">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li><p>Advise teams that they are to produce a one presentation that covers at least three emerging themes that the team has devised from watching the presentation.</p>
+</li>
+<li><p>Advise teams they should also identify at least one novel aspect or divergence between the different guidelines to support the admission of expert evidence.</p>
+</li>
+<li><p>Teams should upload the slide in advance of the next activity to the virtual learning environment (VLE).</p>
+</li>
+<li><p>As teams produce their slides, the lecturer should wander between groups to observe discussion and actions.</p>
+</li>
+</ol>
+<h4 id="materials-7">Materials</h4>
+<ul>
+<li><a href="../legalConcerns/expertEvidence/identifyThemes.html">Activity Sheet</a></li>
+</ul>
+<h3 id="discussing-emering-themes-in-guidelines">Discussing Emering Themes in Guidelines</h3>
+<p>Teams will present the themes they have identified from a previous activity as well as engage in a discussion with the rest of the class.</p>
+<h4 id="instructions-10">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li><p>The lecturer will use a <a href="https://www.google.com/search?q=random+number+generator">random number generator</a> to randomly select pairs to present. The lecturer may favour to select pairs on what they have observed, rather than randomly to demonstrate and discuss with the entire class any novel insights or gaps in understanding.</p>
+</li>
+<li><p>Teams have two minutes to present the themes they have identified as well as divergence.</p>
+</li>
+<li><p>The lecturer should select one of the themes or divergence to discuss with the wider class and ask for their comments and thoughts.</p>
+</li>
+<li><p>The lecturer should continue to ask for teams to present either based on the disucssion, what they observed when teams were producing their slides or using a <a href="https://www.google.com/search?q=random+number+generator">random number generator</a>.</p>
+</li>
+</ol>
+<h3 id="themes-in-guidelines-and-established-guidelines">Themes in Guidelines and Established Guidelines</h3>
+<p>The lecturer should provide a brief overview of the themes identified in the prior activities and relate them to the already established guidelines for admitting expert evidence in court that are discussed in the CyBOK.</p>
+<h4 id="instructions-11">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li><p>Advise learners of some of the themes that have emerged from consideration of all the various guidelines.</p>
+</li>
+<li><p>Relate the themes from the proposed guidelines to the estblished guidelines discussed in CyBOK as well as significant cases.</p>
+</li>
+<li><p>Provide space for learners to raise any questions or address any gaps in understanding.</p>
+</li>
+</ol>
+<hr>
+<h2 id="handling-evidence">Handling Evidence</h2>
+<ul>
+<li>Produce Summary of Case Study</li>
+<li>Overview of Case</li>
+<li>First Appeal Ground for Case</li>
+<li>Second Appeal Ground for Case</li>
+<li>Generating guidelines for authorities handling evidence</li>
+<li>Presentation to Class</li>
+<li>Identify Emerging Themes in Guidelines</li>
+<li>Discussing Emering Themes in Guidelines</li>
+<li>Themes in Guidelines and Established Guidelines</li>
+</ul>
+<h3 id="produce-summary-of-case-study-1">Produce Summary of Case Study</h3>
+<p>The lecturer or instructor should advise learners in advance that they are required to complete an entry ticket activity for the lesson.</p>
+<h4 id="materials-8">Materials</h4>
+<ul>
+<li><a href="../legalConcerns/handling/produceSummary.html">Activity Sheet</a></li>
+</ul>
+<h3 id="overview-of-case-1">Overview of Case</h3>
+<p>The lecturer or instructor should provide a brief summary of the <em>Mowday versus The State of Western Australia</em> case to the class.</p>
+<p>The motivation for providing the overview is:</p>
+<ul>
+<li><p>address any misconceptions or gaps in understanding that students may have developed when considering the case in advance.</p>
+</li>
+<li><p>support those students that have no adequately considered the case in advance as to ensure they can effectively contribute to the activity.</p>
+</li>
+</ul>
+<h3 id="first-appeal-ground-for-case">First Appeal Ground for Case</h3>
+<p>Learners are to consider the case, court transcript snippets and determine whether they would grant or reject the first appeal grounds. The motivation is for learners to understand the significance around handling evidence and how it can undermine admissibility of evidence.</p>
+<h4 id="instructions-12">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li><p>Issue the activity sheet that will guide and support the learners.</p>
+</li>
+<li><p>Advise learners they are going to consider the <em>Mowday versus The State of Western Australia</em> case and the first of two appeal grounds.</p>
+</li>
+<li><p>Permit learners specific time to consider their summary and transcript snippets to determine if the first appeal ground should be accepted or rejected.</p>
+</li>
+<li><p>Permit learners specific time to produce a 100 word judgement and this will support them in subsequent activities.   </p>
+</li>
+<li><p>As learners consider and document their judgement, the lecturer should wander between them and address any questions or gaps in understanding.</p>
+</li>
+</ol>
+<h4 id="materials-9">Materials</h4>
+<ul>
+<li><a href="../legalConcerns/handling/appealGroundOne.html">Activity Sheet</a></li>
+<li>Mowday versus The State of Western Australia case.</li>
+<li>250-word summary produced in advance.</li>
+<li>Transcript snippets.</li>
+</ul>
+<h3 id="second-appeal-ground-for-case">Second Appeal Ground for Case</h3>
+<p>Learners are to self-organise into pairs and consider the second of the appeal grounds collectively, considering the case, their summaries and prior judgements. The motivation of the activity is to strengthen the significant around handling evidence and how it can undermine admissibility of evidence.</p>
+<h4 id="instructions-13">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li><p>Issue the activity sheet that will guide and support the learners.</p>
+</li>
+<li><p>Advise learners they are going to consider the <em>Mowday versus The State of Western Australia</em> case and the second of two appeal grounds.</p>
+</li>
+<li><p>Advise learners to self-organise into pairs, exchange summaries and judgements for the first appeal ground.</p>
+</li>
+<li><p>Permit pairs time to discuss and consider their summaries, judgements and the second appeal ground.</p>
+</li>
+<li><p>Instruct pairs to formate a position collectively as to whether or not the second appeal judgement should be accepted or rejected.</p>
+</li>
+<li><p>As pairs consider and document their judgement, the lectuer should wander between them and address any questions or gaps in understanding.</p>
+</li>
+</ol>
+<h4 id="materials-10">Materials</h4>
+<ul>
+<li><a href="../legalConcerns/handling/appealGroundTwo.html">Activity Sheet</a></li>
+<li>Mowday versus The State of Western Australia case.</li>
+<li>250-word summary produced in advance from both partners.</li>
+<li>Summary position adopted from Ground 1 for both partners.</li>
+</ul>
+<h3 id="generating-guidelines-for-authorities-handling-evidence">Generating guidelines for authorities handling evidence</h3>
+<p>Learners are to self-organise into teams and to formulate no more than <strong>FOUR</strong> guidelines that support authorities in effectively handling evidence as to ensure admissibility. Teams are required to generate a slide of the guidelines with suitable rationale that will be presented to the class.</p>
+<h4 id="instructions-14">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li><p>Issue the activity sheet that will guide and support the learners.</p>
+</li>
+<li><p>Advise learners they are going to consider the <em>Mowday versus The State of Western Australia</em> case, overall handling of evidence and that they are going to generate no more than <strong>FOUR</strong> guidelines that support authorities in effectively handling evidence as to ensure admissibility.</p>
+</li>
+<li><p>Advise pairs to self-organise into teams, exchange summaries and judgements from previous activities.</p>
+</li>
+<li><p>Permit teams time to discuss and consider their summaries, judgements from previous activities.</p>
+</li>
+<li><p>Instruct teams to generate <strong>ONE</strong> presentation slide that succinctly outlines each of the guidelines as well as brief rationale for each.</p>
+</li>
+<li><p>As teams consider and document their judgement, the lecturer should wander between them and address any questions or gaps in understanding.</p>
+</li>
+<li><p>Advise teams to upload slide to the virtual learning environment (VLE) when time has elasped.</p>
+</li>
+</ol>
+<h4 id="materials-11">Materials</h4>
+<ul>
+<li><a href="../legalConcerns/handling/handlingEvidenceGuidelines.html">Activity Sheet</a></li>
+<li>Mowday versus The State of Western Australia case.</li>
+<li>250-word summary produced in advance from all learners.</li>
+<li>Summary position adopted from Ground 1 for all learners.</li>
+<li>Summary position adopted from Ground 2 for all pairs.</li>
+</ul>
+<h3 id="presentation-to-class-1">Presentation to Class</h3>
+<p>The class will learn about the different guidelines that learners have produced to support in the process of handling evidence. The class should take notes during the session to support a subsequent activity in identifying emerging themes.</p>
+<h4 id="instructions-15">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li><p>Prepare the presentations taken from the virtual learning environment and produce a running order and advise to student in advance.</p>
+</li>
+<li><p>Advise teams they have <strong>TWO</strong> minutes to give their presentation. The team will be given a one minute warning and will be clapped off at the end of their allocated time. Teams should also be advised they will not be expected to take questions but may be called upon in subsequent activities and discussions.</p>
+</li>
+<li><p>Advise teams that they all have to speak and to consider how they will pass between members efficiently.</p>
+</li>
+<li><p>Advise teams that presentation slide decks will be made available after the session, but they should still take notes to support a subsequent activity.</p>
+</li>
+<li><p>Use a stopwatch and commence the presentations with teams.</p>
+</li>
+</ol>
+<h4 id="materials-12">Materials</h4>
+<ul>
+<li><a href="../legalConcerns/handling/presentationToClass.html">Activity Sheet</a></li>
+</ul>
+<h3 id="identify-emerging-themes-in-guidelines-1">Identify Emerging Themes in Guidelines</h3>
+<p>Teams of learners will use their collective notes, their own research and other presentations from teams to identify themes and divergences in guidelines to support handling of evidence.</p>
+<h4 id="instructions-16">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li><p>Advise teams that they are to produce a one presentation that covers at least three emerging themes that the team has devised from watching the presentation.</p>
+</li>
+<li><p>Advise teams they should also identify at least one novel aspect or divergence between the different guidelines to support handling of evidence.</p>
+</li>
+<li><p>Teams should upload the slide in advance of the next activity to the virtual learning environment (VLE).</p>
+</li>
+<li><p>As teams produce their slides, the lecturer should wander between groups to observe discussion and actions.</p>
+</li>
+</ol>
+<h4 id="materials-13">Materials</h4>
+<ul>
+<li><a href="../legalConcerns/handling/identifyThemes.html">Activity Sheet</a></li>
+</ul>
+<h3 id="discussing-emering-themes-in-guidelines-1">Discussing Emering Themes in Guidelines</h3>
+<p>Teams will present the themes they have identified from a previous activity as well as engage in a discussion with the rest of the class.</p>
+<h4 id="instructions-17">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li><p>The lecturer will use a <a href="https://www.google.com/search?q=random+number+generator">random number generator</a> to randomly select pairs to present. The lecturer may favour to select pairs on what they have observed, rather than randomly to demonstrate and discuss with the entire class any novel insights or gaps in understanding.</p>
+</li>
+<li><p>Teams have two minutes to present the themes they have identified as well as divergence.</p>
+</li>
+<li><p>The lecturer should select one of the themes or divergence to discuss with the wider class and ask for their comments and thoughts.</p>
+</li>
+<li><p>The lecturer should continue to ask for teams to present either based on the disucssion, what they observed when teams were producing their slides or using a <a href="https://www.google.com/search?q=random+number+generator">random number generator</a>.</p>
+</li>
+</ol>
+<h3 id="themes-in-guidelines-and-established-guidelines-1">Themes in Guidelines and Established Guidelines</h3>
+<p>The lecturer should provide a brief overview of the themes identified in the prior activities and relate them to the already established guidelines for handling evidence that are discussed in the CyBOK.</p>
+<h4 id="instructions-18">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li><p>Advise learners of some of the themes that have emerged from consideration of all the various guidelines.</p>
+</li>
+<li><p>Relate the themes from the proposed guidelines to the established guidelines discussed in CyBOK as well as significant cases.</p>
+</li>
+<li><p>Provide space for learners to raise any questions or address any gaps in understanding.</p>
+</li>
+</ol>
+<h3 id="considering-the-ross-ulbricht-versus-united-states-case">Considering the Ross Ulbricht versus United States case</h3>
+<p>The lecturer or instructor should provide a brief summary of the <em>Ross Ulbricht versus United States</em> case to the class. Learners should be asked to consider and produce a summary in advance but the case will act as a <em>unseen</em> problem that learners are going to apply their guidelines.</p>
+<h4 id="instructions-19">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li><p>Issue the activity sheet that will guide and support the learners.</p>
+</li>
+<li><p>Advise teams they are going to consider the <em>Ross Ulbricht versus United States</em> case and apply previously devised guidelines.</p>
+</li>
+<li><p>Advise teams they are to produce a single slide that highlights where the guidelines have not been met.</p>
+</li>
+<li><p>Advise teams to upload material to the virtual learning environment (VLE).</p>
+</li>
+<li><p>As learners consider and document their judgement, the lecturer should wander between them and address any questions or gaps in understanding.</p>
+</li>
+</ol>
+<h4 id="materials-14">Materials</h4>
+<ul>
+<li><a href="../legalConcerns/handling/unseen.html">Activity Sheet</a></li>
+</ul>
+<h3 id="presentation-to-class-2">Presentation to Class</h3>
+<p>The class will learn about the different guidelines that learners have produced to support in the process of handling evidence. The class should take notes during the session to support a subsequent activity in identifying emerging themes.</p>
+<h4 id="instructions-20">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li><p>Prepare the presentations taken from the virtual learning environment and produce a running order and advise to student in advance.</p>
+</li>
+<li><p>Advise teams they have <strong>TWO</strong> minutes to give their presentation. The team will be given a one minute warning and will be clapped off at the end of their allocated time. Teams should also be advised they will not be expected to take questions but may be called upon in subsequent activities and discussions.</p>
+</li>
+<li><p>Advise teams that they all have to speak and to consider how they will pass between members efficiently.</p>
+</li>
+<li><p>Advise teams that presentation slide decks will be made available after the session, but they should still take notes to support a subsequent activity.</p>
+</li>
+<li><p>Use a stopwatch and commence the presentations with teams.</p>
+</li>
+</ol>
+<h4 id="materials-15">Materials</h4>
+<ul>
+<li><a href="../legalConcerns/handling/presentationToClass.html">Activity Sheet</a></li>
+</ul>
+<h3 id="guidelines-fit-for-task">Guidelines fit for Task</h3>
+<p>The last aspect is for learners to consider the different application of guidelines and reflect to determine if they can refine the guidelines they have produced.</p>
+<h4 id="instructions-21">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li><p>Advise teams should spend <strong>10</strong> minutes discussing and recalling the presentations from other start-up firms and begin to refine their guidelines.</p>
+</li>
+<li><p>Advise teams to produce a <strong>ONE</strong> page summary in terms of how their guidelines are appropriate or how they intend to refine them.</p>
+</li>
+</ol>
+<hr>
+<h2 id="admissibility-of-evidence-1">Admissibility of Evidence</h2>
+<p>The challenge and coverage of admitting expert evidence and handling evidence as to ensure it is admissible in court as discussed in the CyBOK should be presented to the class and relayed back to the activities that have been conducted throughout the lesson.</p>
+<h4 id="instructions-22">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li><p>Present an overview of admitting expert evidence and handling evidence as to ensure it is admissible in court.</p>
+</li>
+<li><p>Ask the class if they have any questions or do not any aspect of what was covered in the session.</p>
+</li>
+<li><p>Ask learners to complete the Quad Fold Activity.</p>
+</li>
+</ol>
+<h4 id="materials-16">Materials</h4>
+<ul>
+<li><a href="">Quad Four Activity</a></li>
+</ul></body>
+      </html>
