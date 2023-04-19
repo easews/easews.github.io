@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>networkConnectionsActivitySheet</title>
+  <title>memoryDumpAnalysis</title>
   <style>
     html {
       color: #1a1a1a;
@@ -165,37 +165,108 @@
   <![endif]-->
 </head>
 <body>
-<h1 id="network-connections-activity-sheet">Network Connections Activity
-Sheet</h1>
+<h1 id="memory-dump-analysis">Memory Dump Analysis</h1>
 <p>Learners are to complete the following:</p>
 <ol type="1">
-<li><p>Consult the <a href="../memory/TCPConnections.html">TCP
-Connections</a> information sheet and consider the <strong>CONSOLE
-OUPUT</strong> from <a
+<li><p>Consider the <strong>FIRST</strong> and <strong>SECOND</strong>
+excerpt taken from the memory dump for process with ID
+<code>1640</code>, generated from <a
 href="https://www.volatilityfoundation.org">Volatility Framework</a>
-after execution of the <code>connscann</code> plugin on the captured
-memory image.</p></li>
-<li><p>There is more than one connection listed, the next interesting
-aspect is to consider those network connections that remained open at
-the point of memory image capture.</p></li>
-<li><p>Consult the <a href="../memory/openSockets.html">Open Sockets</a>
-information sheet and consider the <strong>CONSOLE OUPUT</strong> from
-<a href="https://www.volatilityfoundation.org">Volatility Framework</a>
-after execution of the <code>sockets</code> plugin on the captured
-memory image.</p></li>
-<li><p>Remain in pairs from prior activity. Pairs have
-<strong>15</strong> minutes to identify interesting information that
-emerges from consideration the <a
-href="../memory/TCPConnections.html">TCP Connections</a> output and <a
-href="../memory/openSockets.html">Open Sockets</a> output related to the
-outcome of the previous block of activities on processes. The instructor
-will issue a <strong>ONE</strong> minute warning when time is nearly
-elapsed.</p></li>
+after executing the <code>memdump</code> plugin on the captured memory
+image.</p></li>
+<li><p>Remain in pairs from prior activity. Spend a few minutes and
+consider what the excepts suggest.</p></li>
 </ol>
-<h4 id="materials">Materials</h4>
-<ul>
-<li><a href="../memory/TCPConnections.html">TCP Connections</a></li>
-<li><a href="../memory/openSockets.html">Open Sockets</a></li>
-</ul>
+<h3 id="first-excerpt-from-memory-dump">First Excerpt from Memory
+Dump</h3>
+<pre><code>ABACFPFPENFDECFCEPFHFDEFFPFPACAB
+DpI8
+POST /zb/v_01_a/in/ HTTP/1.1
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows; U; MSIE 7.0; Windows NT 6.0; en-US)
+Host: 41.168.5.140:8080
+Content-Length: 229
+Connection: Keep-Alive
+Cache-Control: no-cache</code></pre>
+<h3 id="second-excerpt-from-memory-dump">Second Excerpt from Memory
+Dump</h3>
+<pre><code>*treasurypathways.com*
+*CorporateAccounts*
+*weblink.websterbank.com*
+*secure7.onlineaccess1.com*
+*trz.tranzact.org*
+*onlineaccess1.com*
+*secureport.texascapitalbank.com*
+*/Authentication/zbf/k/*
+*ebc_ebc1961*
+*tdbank.com*
+*online.ovcb.com*
+*ebanking-services.com*
+*schwab.com*
+*billmelater.com*
+*chase.com*
+*bankofamerica.com*
+*pnc.com*
+*suntrust.com*
+*wellsfargo.com*
+*ibanking-services.com*
+*bankonline.umpquabank.com*
+*servlet/teller*
+*nsbank.com*
+*securentry.calbanktrust.com*
+*securentry*
+*/Common/SignOn/Start.asp*
+*telepc.net*
+*enterprise2.openbank.com*
+*BusinessAppsHome*
+*global1.onlinebank.com*
+*webexpress*
+*/sbuser/*
+*hsbc.co.uk*
+*ablv.com*
+*accessbankplc.com*
+*alphabank.com.cy*
+*baltikums.com*
+*baltikums.eu*
+*banesco.com.pa*
+*bankaustria.at*
+*banknet.lv*
+*bankofcyprus.com*
+*bobibanking.com*
+*butterfieldonline.ky*
+*cimbanque.net*
+*cs.directnet.com*
+*directnet.com*
+*danskebanka.lv*
+*ebank.laiki.com*
+*ebank.rcbcy.com*
+*ebemo.bemobank.com*
+*e-norvik.lv*
+*eurobankefg.com*
+*eurobankefg.com.cy*
+*ekp.lv*
+*fbmedirect.com*
+*hblibank.com*
+*hellenicnetbanking.com*
+*hiponet.lv*
+*hkbea*
+*ibanka.seb.lv*
+*ib.baltikums.com*
+*geonline.lv*
+*ib.dnb.lv*
+*bib.lv*
+*ib.snoras.com*
+*i-linija.lt*
+*loyalbank.com*
+*marfinbank.com.cy*
+*multinetbank.eu*
+*nordea.com*
+*secure.ltbbank.com*
+*secure.ltblv.com*
+*swedbank.lv*
+*norvik.lv*
+*online.alphabank.com.cy*
+*online.citadele.lv*
+*online.lkb.lv*</code></pre>
 </body>
 </html>

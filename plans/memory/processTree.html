@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>processTree</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="process-tree-activity-sheet">Process Tree Activity Sheet</h1>
+<p>Learners are to complete the following:</p>
+<ol type="1">
+<li><p>Consider the <strong>CONSOLE OUPUT</strong> from <a
+href="https://www.volatilityfoundation.org">Volatility Framework</a>
+below after executing the <code>pstree</code> plugin on the captured
+memory image.</p></li>
+<li><p>Remain in pairs from prior activity. Pairs have
+<strong>15</strong> minutes to document the relationships between the
+processes. The instructor will issue a <strong>ONE</strong> minute
+warning when time is nearly elapsed.</p></li>
+<li><p>Use the scissors to segment the <strong>VISUAL MAP
+ELEMENTS</strong>. Use the elements to visualise the processes in terms
+of parent and child relationships.</p></li>
+</ol>
+<h3 id="visual-map-elements">Visual Map Elements</h3>
+<p>The following elements can be used to visualise the relationship
+between the different processes.</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Description</th>
+<th>Image</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Running Process</td>
+<td><img src="resources/process_4.png" alt="image" /></td>
+</tr>
+<tr class="even">
+<td>Running Process</td>
+<td><img src="resources/process_368.png" alt="image" /></td>
+</tr>
+<tr class="odd">
+<td>Running Process</td>
+<td><img src="resources/process_608.png" alt="image" /></td>
+</tr>
+<tr class="even">
+<td>Running Process</td>
+<td><img src="resources/process_652.png" alt="image" /></td>
+</tr>
+<tr class="odd">
+<td>Running Process</td>
+<td><img src="resources/process_1056.png" alt="image" /></td>
+</tr>
+<tr class="even">
+<td>Running Process</td>
+<td><img src="resources/process_1512.png" alt="image" /></td>
+</tr>
+<tr class="odd">
+<td>Running Process</td>
+<td><img src="resources/process_908.png" alt="image" /></td>
+</tr>
+<tr class="even">
+<td>Running Process</td>
+<td><img src="resources/process_1004.png" alt="image" /></td>
+</tr>
+<tr class="odd">
+<td>Running Process</td>
+<td><img src="resources/process_1588.png" alt="image" /></td>
+</tr>
+<tr class="even">
+<td>Running Process</td>
+<td><img src="resources/process_1136.png" alt="image" /></td>
+</tr>
+<tr class="odd">
+<td>Running Process</td>
+<td><img src="resources/process_824.png" alt="image" /></td>
+</tr>
+<tr class="even">
+<td>Running Process</td>
+<td><img src="resources/process_788.png" alt="image" /></td>
+</tr>
+<tr class="odd">
+<td>Running Process</td>
+<td><img src="resources/process_1220.png" alt="image" /></td>
+</tr>
+<tr class="even">
+<td>Running Process</td>
+<td><img src="resources/process_664.png" alt="image" /></td>
+</tr>
+<tr class="odd">
+<td>Running Process</td>
+<td><img src="resources/process_584.png" alt="image" /></td>
+</tr>
+<tr class="even">
+<td>Running Process</td>
+<td><img src="resources/process_1484.png" alt="image" /></td>
+</tr>
+<tr class="odd">
+<td>Running Process</td>
+<td><img src="resources/process_1640.png" alt="image" /></td>
+</tr>
+<tr class="even">
+<td>Parent Process</td>
+<td><img src="resources/parent_process_0.png" alt="image" /></td>
+</tr>
+<tr class="odd">
+<td>Parent Process</td>
+<td><img src="resources/parent_process_4.png" alt="image" /></td>
+</tr>
+<tr class="even">
+<td>Parent Process</td>
+<td><img src="resources/parent_process_368.png" alt="image" /><img
+src="resources/parent_process_368.png" alt="image" /></td>
+</tr>
+<tr class="odd">
+<td>Parent Process</td>
+<td><img src="resources/parent_process_608.png" alt="image" /> <img
+src="resources/parent_process_608.png" alt="image" /></td>
+</tr>
+<tr class="even">
+<td>Parent Process</td>
+<td><img src="resources/parent_process_652.png" alt="image" /><img
+src="resources/parent_process_652.png" alt="image" /><img
+src="resources/parent_process_652.png" alt="image" /><img
+src="resources/parent_process_652.png" alt="image" /><img
+src="resources/parent_process_652.png" alt="image" /><img
+src="resources/parent_process_652.png" alt="image" /><img
+src="resources/parent_process_652.png" alt="image" /></td>
+</tr>
+<tr class="odd">
+<td>Parent Process</td>
+<td><img src="resources/parent_process_1004.png" alt="image" /> <img
+src="resources/parent_process_1004.png" alt="image" /></td>
+</tr>
+<tr class="even">
+<td>Parent Process</td>
+<td><img src="resources/parent_process_1464.png" alt="image" /></td>
+</tr>
+<tr class="odd">
+<td>Parent Process</td>
+<td><img src="resources/parent_process_1484.png" alt="image" /></td>
+</tr>
+<tr class="even">
+<td>Arrow</td>
+<td><img src="resources/arrow.png" alt="image" /><img
+src="resources/arrow.png" alt="image" /><img src="resources/arrow.png"
+alt="image" /><img src="resources/arrow.png" alt="image" /><img
+src="resources/arrow.png" alt="image" /> <img src="resources/arrow.png"
+alt="image" /><img src="resources/arrow.png" alt="image" /><img
+src="resources/arrow.png" alt="image" /><img src="resources/arrow.png"
+alt="image" /><img src="resources/arrow.png" alt="image" /> <img
+src="resources/arrow.png" alt="image" /><img src="resources/arrow.png"
+alt="image" /><img src="resources/arrow.png" alt="image" /><img
+src="resources/arrow.png" alt="image" /><img src="resources/arrow.png"
+alt="image" /> <img src="resources/arrow.png" alt="image" /><img
+src="resources/arrow.png" alt="image" /><img src="resources/arrow.png"
+alt="image" /><img src="resources/arrow.png" alt="image" /><img
+src="resources/arrow.png" alt="image" /></td>
+</tr>
+</tbody>
+</table>
+<h3 id="console-output">Console Output</h3>
+<pre><code>Volatility Foundation Volatility Framework 2.6
+Name                                                  Pid   PPid
+-------------------------------------------------- ------ ------
+ 0x823c89c8:System                                      4      0     
+. 0x822f1020:smss.exe                                 368      4      
+.. 0x82298700:winlogon.exe                            608    368     
+... 0x81e2ab28:services.exe                           652    608     
+.... 0x821dfda0:svchost.exe                          1056    652      
+.... 0x81eb17b8:spoolsv.exe                          1512    652     
+.... 0x81e29ab8:svchost.exe                           908    652      
+.... 0x823001d0:svchost.exe                          1004    652     
+..... 0x8205bda0:wuauclt.exe                         1588   1004      
+..... 0x821fcda0:wuauclt.exe                         1136   1004      
+.... 0x82311360:svchost.exe                           824    652     
+.... 0x820e8da0:alg.exe                               788    652      
+.... 0x82295650:svchost.exe                          1220    652     
+... 0x81e2a3b8:lsass.exe                              664    608     
+.. 0x822a0598:csrss.exe                               584    368      
+ 0x821dea70:explorer.exe                             1484   1464     
+. 0x81e7bda0:reader_sl.exe                           1640   1484  </code></pre>
+<h3 id="materials">Materials</h3>
+<ul>
+<li>Scissors</li>
+</ul>
+</body>
+</html>

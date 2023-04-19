@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>networkConnectionsActivitySheet</title>
+  <title>commandLineSheet</title>
   <style>
     html {
       color: #1a1a1a;
@@ -165,37 +165,71 @@
   <![endif]-->
 </head>
 <body>
-<h1 id="network-connections-activity-sheet">Network Connections Activity
-Sheet</h1>
+<h1 id="command-line-sheet">Command Line Sheet</h1>
 <p>Learners are to complete the following:</p>
 <ol type="1">
-<li><p>Consult the <a href="../memory/TCPConnections.html">TCP
-Connections</a> information sheet and consider the <strong>CONSOLE
-OUPUT</strong> from <a
+<li><p>Consider the <strong>CONSOLE OUPUT</strong> from <a
 href="https://www.volatilityfoundation.org">Volatility Framework</a>
-after execution of the <code>connscann</code> plugin on the captured
-memory image.</p></li>
-<li><p>There is more than one connection listed, the next interesting
-aspect is to consider those network connections that remained open at
-the point of memory image capture.</p></li>
-<li><p>Consult the <a href="../memory/openSockets.html">Open Sockets</a>
-information sheet and consider the <strong>CONSOLE OUPUT</strong> from
-<a href="https://www.volatilityfoundation.org">Volatility Framework</a>
-after execution of the <code>sockets</code> plugin on the captured
+below after executing the <code>cmdline</code> plugin on the captured
 memory image.</p></li>
 <li><p>Remain in pairs from prior activity. Pairs have
-<strong>15</strong> minutes to identify interesting information that
-emerges from consideration the <a
-href="../memory/TCPConnections.html">TCP Connections</a> output and <a
-href="../memory/openSockets.html">Open Sockets</a> output related to the
-outcome of the previous block of activities on processes. The instructor
-will issue a <strong>ONE</strong> minute warning when time is nearly
-elapsed.</p></li>
+<strong>15</strong> minutes to identify interesting aspects that emerges
+from consideration of the <strong>CONSOLE OUTPUT</strong> and output
+from prior activities. The instructor will issue a <strong>ONE</strong>
+minute warning when time is nearly elapsed.</p></li>
 </ol>
-<h4 id="materials">Materials</h4>
-<ul>
-<li><a href="../memory/TCPConnections.html">TCP Connections</a></li>
-<li><a href="../memory/openSockets.html">Open Sockets</a></li>
-</ul>
+<h3 id="console-output">Console Output</h3>
+<pre><code>Volatility Foundation Volatility Framework 2.6
+********************************************************************
+System pid:      4
+********************************************************************
+smss.exe pid:    368
+Command line : \SystemRoot\System32\smss.exe
+********************************************************************
+csrss.exe pid:    584
+Command line : C:\WINDOWS\system32\csrss.exe ObjectDirectory=\Windows SharedSection=1024,3072,512 Windows=On SubSystemType=Windows ServerDll=basesrv,1 ServerDll=winsrv:UserServerDllInitialization,3 ServerDll=winsrv:ConServerDllInitialization,2 ProfileControl=Off MaxRequestThreads=16
+********************************************************************
+winlogon.exe pid:    608
+Command line : winlogon.exe
+********************************************************************
+services.exe pid:    652
+Command line : C:\WINDOWS\system32\services.exe
+********************************************************************
+lsass.exe pid:    664
+Command line : C:\WINDOWS\system32\lsass.exe
+********************************************************************
+svchost.exe pid:    824
+Command line : C:\WINDOWS\system32\svchost -k DcomLaunch
+********************************************************************
+svchost.exe pid:    908
+Command line : C:\WINDOWS\system32\svchost -k rpcss
+********************************************************************
+svchost.exe pid:   1004
+Command line : C:\WINDOWS\System32\svchost.exe -k netsvcs
+********************************************************************
+svchost.exe pid:   1056
+Command line : C:\WINDOWS\system32\svchost.exe -k NetworkService
+********************************************************************
+svchost.exe pid:   1220
+Command line : C:\WINDOWS\system32\svchost.exe -k LocalService
+********************************************************************
+explorer.exe pid:   1484
+Command line : C:\WINDOWS\Explorer.EXE
+********************************************************************
+spoolsv.exe pid:   1512
+Command line : C:\WINDOWS\system32\spoolsv.exe
+********************************************************************
+reader_sl.exe pid:   1640
+Command line : &quot;C:\Program Files\Adobe\Reader 9.0\Reader\Reader_sl.exe&quot;
+********************************************************************
+alg.exe pid:    788
+Command line : C:\WINDOWS\System32\alg.exe
+********************************************************************
+wuauclt.exe pid:   1136
+Command line : &quot;C:\WINDOWS\system32\wuauclt.exe&quot; /RunStoreAsComServer Local\[3ec]SUSDSb81eb56fa3105543beb3109274ef8ec1
+********************************************************************
+wuauclt.exe pid:   1588
+Command line : &quot;C:\WINDOWS\system32\wuauclt.exe&quot;
+</code></pre>
 </body>
 </html>

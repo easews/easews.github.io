@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>networkConnectionsActivitySheet</title>
+  <title>openSockets</title>
   <style>
     html {
       color: #1a1a1a;
@@ -165,37 +165,29 @@
   <![endif]-->
 </head>
 <body>
-<h1 id="network-connections-activity-sheet">Network Connections Activity
-Sheet</h1>
-<p>Learners are to complete the following:</p>
-<ol type="1">
-<li><p>Consult the <a href="../memory/TCPConnections.html">TCP
-Connections</a> information sheet and consider the <strong>CONSOLE
-OUPUT</strong> from <a
-href="https://www.volatilityfoundation.org">Volatility Framework</a>
-after execution of the <code>connscann</code> plugin on the captured
-memory image.</p></li>
-<li><p>There is more than one connection listed, the next interesting
-aspect is to consider those network connections that remained open at
-the point of memory image capture.</p></li>
-<li><p>Consult the <a href="../memory/openSockets.html">Open Sockets</a>
-information sheet and consider the <strong>CONSOLE OUPUT</strong> from
-<a href="https://www.volatilityfoundation.org">Volatility Framework</a>
-after execution of the <code>sockets</code> plugin on the captured
-memory image.</p></li>
-<li><p>Remain in pairs from prior activity. Pairs have
-<strong>15</strong> minutes to identify interesting information that
-emerges from consideration the <a
-href="../memory/TCPConnections.html">TCP Connections</a> output and <a
-href="../memory/openSockets.html">Open Sockets</a> output related to the
-outcome of the previous block of activities on processes. The instructor
-will issue a <strong>ONE</strong> minute warning when time is nearly
-elapsed.</p></li>
-</ol>
-<h4 id="materials">Materials</h4>
-<ul>
-<li><a href="../memory/TCPConnections.html">TCP Connections</a></li>
-<li><a href="../memory/openSockets.html">Open Sockets</a></li>
-</ul>
+<h1 id="open-sockets">Open Sockets</h1>
+<p>The <strong>CONSOLE OUPUT</strong> from <a
+href="https://www.volatilityfoundation.org">Volatility Framework</a> is
+generated after executing the <code>sockets</code> plugin on the
+captured memory image.</p>
+<h3 id="console-output">Console Output</h3>
+<pre><code>Volatility Foundation Volatility Framework 2.6
+Offset(V)       PID   Port  Proto Protocol        Address         
+---------- -------- ------ ------ --------------- ---------------
+0x81ddb780      664    500     17 UDP             0.0.0.0         
+0x82240d08     1484   1038      6 TCP             0.0.0.0         
+0x81dd7618     1220   1900     17 UDP             172.16.112.128  
+0x82125610      788   1028      6 TCP             127.0.0.1       
+0x8219cc08        4    445      6 TCP             0.0.0.0         
+0x81ec23b0      908    135      6 TCP             0.0.0.0         
+0x82276878        4    139      6 TCP             172.16.112.128  
+0x82277460        4    137     17 UDP             172.16.112.128  
+0x81e76620     1004    123     17 UDP             127.0.0.1       
+0x82172808      664      0    255 Reserved        0.0.0.0         
+0x81e3f460        4    138     17 UDP             172.16.112.128  
+0x821f0630     1004    123     17 UDP             172.16.112.128  
+0x822cd2b0     1220   1900     17 UDP             127.0.0.1       
+0x82172c50      664   4500     17 UDP             0.0.0.0         
+0x821f0d00        4    445     17 UDP             0.0.0.0    </code></pre>
 </body>
 </html>
