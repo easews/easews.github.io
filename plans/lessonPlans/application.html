@@ -1,0 +1,1268 @@
+      <!DOCTYPE html>
+      <html>
+        <head>
+            <meta charset="utf-8" />
+            <title>application</title>
+            <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(171, 178, 191); background-color: rgb(40, 44, 52); overflow: auto; }
+.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
+.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
+.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
+.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
+.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) strong { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(124, 135, 156); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(82, 139, 255); }
+.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
+.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(124, 135, 156); border-color: rgb(75, 83, 98); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top: 2px dashed rgb(75, 83, 98); background: none; }
+.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
+.markdown-preview:not([data-use-github-style]) th { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(75, 83, 98); }
+.markdown-preview:not([data-use-github-style]) code { color: rgb(255, 255, 255); background-color: rgb(58, 63, 75); }
+.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(49, 54, 63); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(255, 255, 255); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(75, 83, 98) rgb(75, 83, 98) rgb(62, 68, 81); border-image: initial; background-color: rgb(58, 63, 75); }
+.markdown-preview[data-use-github-style] { font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif; line-height: 1.6; overflow-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); background-color: rgb(255, 255, 255); overflow: scroll; }
+.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border: 0px none; }
+.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left: 4px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
+.markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] table tr { background-color: rgb(255, 255, 255); border-top: 1px solid rgb(204, 204, 204); }
+.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; background-color: rgba(0, 0, 0, 0.04); border-radius: 3px; }
+.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: " "; }
+.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; background: transparent; border: 0px; }
+.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border-radius: 3px; }
+.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview[data-use-github-style] pre { overflow-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; overflow-wrap: normal; background-color: transparent; border: 0px; }
+.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; background-color: rgb(252, 252, 252); border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-image: initial; border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; }
+.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
+.markdown-preview[data-use-github-style] code { color: inherit; }
+.markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.markdown-preview pre.editor-colors { user-select: auto; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors .horizontal-scrollbar { visibility: hidden; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors:hover .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover .horizontal-scrollbar { visibility: visible; }
+.markdown-preview .task-list-item input[type="checkbox"] { position: absolute; margin: 0.25em 0px 0px -1.4em; }
+.markdown-preview .task-list-item { list-style-type: none; }
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+.line-number.bracket-matcher.bracket-matcher {
+  color: #abb2bf;
+  background-color: #3a3f4b;
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+}
+.spell-check-corrections {
+  width: 25em !important;
+}
+
+pre.editor-colors {
+  background-color: #282c34;
+  color: #abb2bf;
+}
+pre.editor-colors .line.cursor-line {
+  background-color: rgba(153, 187, 255, 0.04);
+}
+pre.editor-colors .invisible {
+  color: #abb2bf;
+}
+pre.editor-colors .cursor {
+  border-left: 2px solid #528bff;
+}
+pre.editor-colors .selection .region {
+  background-color: #3e4451;
+}
+pre.editor-colors .bracket-matcher .region {
+  border-bottom: 1px solid #528bff;
+  box-sizing: border-box;
+}
+pre.editor-colors .invisible-character {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .indent-guide {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .wrap-guide {
+  background-color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .find-result .region.region.region,
+pre.editor-colors .current-result .region.region.region {
+  border-radius: 2px;
+  background-color: rgba(82, 139, 255, 0.24);
+  transition: border-color 0.4s;
+}
+pre.editor-colors .find-result .region.region.region {
+  border: 2px solid transparent;
+}
+pre.editor-colors .current-result .region.region.region {
+  border: 2px solid #528bff;
+  transition-duration: .1s;
+}
+pre.editor-colors .gutter .line-number {
+  color: #636d83;
+  -webkit-font-smoothing: antialiased;
+}
+pre.editor-colors .gutter .line-number.cursor-line {
+  color: #abb2bf;
+  background-color: #3a3f4b;
+}
+pre.editor-colors .gutter .line-number.cursor-line-no-selection {
+  background-color: transparent;
+}
+pre.editor-colors .gutter .line-number .icon-right {
+  color: #abb2bf;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before {
+  bottom: -3px;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 25px;
+  border-bottom: 1px dotted rgba(224, 82, 82, 0.5);
+  pointer-events: none;
+}
+pre.editor-colors .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+pre.editor-colors .fold-marker:after {
+  color: #abb2bf;
+}
+.syntax--comment {
+  color: #5c6370;
+  font-style: italic;
+}
+.syntax--comment .syntax--markup.syntax--link {
+  color: #5c6370;
+}
+.syntax--entity.syntax--name.syntax--type {
+  color: #e5c07b;
+}
+.syntax--entity.syntax--other.syntax--inherited-class {
+  color: #e5c07b;
+}
+.syntax--keyword {
+  color: #c678dd;
+}
+.syntax--keyword.syntax--control {
+  color: #c678dd;
+}
+.syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--keyword.syntax--other.syntax--special-method {
+  color: #61afef;
+}
+.syntax--keyword.syntax--other.syntax--unit {
+  color: #d19a66;
+}
+.syntax--storage {
+  color: #c678dd;
+}
+.syntax--storage.syntax--type.syntax--annotation,
+.syntax--storage.syntax--type.syntax--primitive {
+  color: #c678dd;
+}
+.syntax--storage.syntax--modifier.syntax--package,
+.syntax--storage.syntax--modifier.syntax--import {
+  color: #abb2bf;
+}
+.syntax--constant {
+  color: #d19a66;
+}
+.syntax--constant.syntax--variable {
+  color: #d19a66;
+}
+.syntax--constant.syntax--character.syntax--escape {
+  color: #56b6c2;
+}
+.syntax--constant.syntax--numeric {
+  color: #d19a66;
+}
+.syntax--constant.syntax--other.syntax--color {
+  color: #56b6c2;
+}
+.syntax--constant.syntax--other.syntax--symbol {
+  color: #56b6c2;
+}
+.syntax--variable {
+  color: #e06c75;
+}
+.syntax--variable.syntax--interpolation {
+  color: #be5046;
+}
+.syntax--variable.syntax--parameter {
+  color: #abb2bf;
+}
+.syntax--string {
+  color: #98c379;
+}
+.syntax--string > .syntax--source,
+.syntax--string .syntax--embedded {
+  color: #abb2bf;
+}
+.syntax--string.syntax--regexp {
+  color: #56b6c2;
+}
+.syntax--string.syntax--regexp .syntax--source.syntax--ruby.syntax--embedded {
+  color: #e5c07b;
+}
+.syntax--string.syntax--other.syntax--link {
+  color: #e06c75;
+}
+.syntax--punctuation.syntax--definition.syntax--comment {
+  color: #5c6370;
+}
+.syntax--punctuation.syntax--definition.syntax--method-parameters,
+.syntax--punctuation.syntax--definition.syntax--function-parameters,
+.syntax--punctuation.syntax--definition.syntax--parameters,
+.syntax--punctuation.syntax--definition.syntax--separator,
+.syntax--punctuation.syntax--definition.syntax--seperator,
+.syntax--punctuation.syntax--definition.syntax--array {
+  color: #abb2bf;
+}
+.syntax--punctuation.syntax--definition.syntax--heading,
+.syntax--punctuation.syntax--definition.syntax--identity {
+  color: #61afef;
+}
+.syntax--punctuation.syntax--definition.syntax--bold {
+  color: #e5c07b;
+  font-weight: bold;
+}
+.syntax--punctuation.syntax--definition.syntax--italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.syntax--punctuation.syntax--section.syntax--embedded {
+  color: #be5046;
+}
+.syntax--punctuation.syntax--section.syntax--method,
+.syntax--punctuation.syntax--section.syntax--class,
+.syntax--punctuation.syntax--section.syntax--inner-class {
+  color: #abb2bf;
+}
+.syntax--support.syntax--class {
+  color: #e5c07b;
+}
+.syntax--support.syntax--type {
+  color: #56b6c2;
+}
+.syntax--support.syntax--function {
+  color: #56b6c2;
+}
+.syntax--support.syntax--function.syntax--any-method {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--function {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--class,
+.syntax--entity.syntax--name.syntax--type.syntax--class {
+  color: #e5c07b;
+}
+.syntax--entity.syntax--name.syntax--section {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--tag {
+  color: #e06c75;
+}
+.syntax--entity.syntax--other.syntax--attribute-name {
+  color: #d19a66;
+}
+.syntax--entity.syntax--other.syntax--attribute-name.syntax--id {
+  color: #61afef;
+}
+.syntax--meta.syntax--class {
+  color: #e5c07b;
+}
+.syntax--meta.syntax--class.syntax--body {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--method-call,
+.syntax--meta.syntax--method {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--definition.syntax--variable {
+  color: #e06c75;
+}
+.syntax--meta.syntax--link {
+  color: #d19a66;
+}
+.syntax--meta.syntax--require {
+  color: #61afef;
+}
+.syntax--meta.syntax--selector {
+  color: #c678dd;
+}
+.syntax--meta.syntax--separator {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--tag {
+  color: #abb2bf;
+}
+.syntax--underline {
+  text-decoration: underline;
+}
+.syntax--none {
+  color: #abb2bf;
+}
+.syntax--invalid.syntax--deprecated {
+  color: #523d14 !important;
+  background-color: #e0c285 !important;
+}
+.syntax--invalid.syntax--illegal {
+  color: white !important;
+  background-color: #e05252 !important;
+}
+.syntax--markup.syntax--bold {
+  color: #d19a66;
+  font-weight: bold;
+}
+.syntax--markup.syntax--changed {
+  color: #c678dd;
+}
+.syntax--markup.syntax--deleted {
+  color: #e06c75;
+}
+.syntax--markup.syntax--italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.syntax--markup.syntax--heading {
+  color: #e06c75;
+}
+.syntax--markup.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
+  color: #61afef;
+}
+.syntax--markup.syntax--link {
+  color: #56b6c2;
+}
+.syntax--markup.syntax--inserted {
+  color: #98c379;
+}
+.syntax--markup.syntax--quote {
+  color: #d19a66;
+}
+.syntax--markup.syntax--raw {
+  color: #98c379;
+}
+.syntax--source.syntax--cs .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--css .syntax--property-name,
+.syntax--source.syntax--css .syntax--property-value {
+  color: #828997;
+}
+.syntax--source.syntax--css .syntax--property-name.syntax--support,
+.syntax--source.syntax--css .syntax--property-value.syntax--support {
+  color: #abb2bf;
+}
+.syntax--source.syntax--elixir .syntax--source.syntax--embedded.syntax--source {
+  color: #abb2bf;
+}
+.syntax--source.syntax--elixir .syntax--constant.syntax--language,
+.syntax--source.syntax--elixir .syntax--constant.syntax--numeric,
+.syntax--source.syntax--elixir .syntax--constant.syntax--definition {
+  color: #61afef;
+}
+.syntax--source.syntax--elixir .syntax--variable.syntax--definition,
+.syntax--source.syntax--elixir .syntax--variable.syntax--anonymous {
+  color: #c678dd;
+}
+.syntax--source.syntax--elixir .syntax--parameter.syntax--variable.syntax--function {
+  color: #d19a66;
+  font-style: italic;
+}
+.syntax--source.syntax--elixir .syntax--quoted {
+  color: #98c379;
+}
+.syntax--source.syntax--elixir .syntax--keyword.syntax--special-method,
+.syntax--source.syntax--elixir .syntax--embedded.syntax--section,
+.syntax--source.syntax--elixir .syntax--embedded.syntax--source.syntax--empty {
+  color: #e06c75;
+}
+.syntax--source.syntax--elixir .syntax--readwrite.syntax--module .syntax--punctuation {
+  color: #e06c75;
+}
+.syntax--source.syntax--elixir .syntax--regexp.syntax--section,
+.syntax--source.syntax--elixir .syntax--regexp.syntax--string {
+  color: #be5046;
+}
+.syntax--source.syntax--elixir .syntax--separator,
+.syntax--source.syntax--elixir .syntax--keyword.syntax--operator {
+  color: #d19a66;
+}
+.syntax--source.syntax--elixir .syntax--variable.syntax--constant {
+  color: #e5c07b;
+}
+.syntax--source.syntax--elixir .syntax--array,
+.syntax--source.syntax--elixir .syntax--scope,
+.syntax--source.syntax--elixir .syntax--section {
+  color: #828997;
+}
+.syntax--source.syntax--gfm .syntax--markup {
+  -webkit-font-smoothing: auto;
+}
+.syntax--source.syntax--gfm .syntax--link .syntax--entity {
+  color: #61afef;
+}
+.syntax--source.syntax--ini .syntax--keyword.syntax--other.syntax--definition.syntax--ini {
+  color: #e06c75;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--modifier.syntax--import {
+  color: #e5c07b;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--type {
+  color: #e5c07b;
+}
+.syntax--source.syntax--java .syntax--keyword.syntax--operator.syntax--instanceof {
+  color: #c678dd;
+}
+.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair {
+  color: #e06c75;
+}
+.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair > .syntax--punctuation {
+  color: #abb2bf;
+}
+.syntax--source.syntax--ts .syntax--keyword.syntax--operator {
+  color: #56b6c2;
+}
+.syntax--source.syntax--flow .syntax--keyword.syntax--operator {
+  color: #56b6c2;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json {
+  color: #e06c75;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation.syntax--string {
+  color: #e06c75;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation {
+  color: #98c379;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--constant.syntax--language.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--constant.syntax--language.syntax--json {
+  color: #56b6c2;
+}
+.syntax--ng.syntax--interpolation {
+  color: #e06c75;
+}
+.syntax--ng.syntax--interpolation.syntax--begin,
+.syntax--ng.syntax--interpolation.syntax--end {
+  color: #61afef;
+}
+.syntax--ng.syntax--interpolation .syntax--function {
+  color: #e06c75;
+}
+.syntax--ng.syntax--interpolation .syntax--function.syntax--begin,
+.syntax--ng.syntax--interpolation .syntax--function.syntax--end {
+  color: #61afef;
+}
+.syntax--ng.syntax--interpolation .syntax--bool {
+  color: #d19a66;
+}
+.syntax--ng.syntax--interpolation .syntax--bracket {
+  color: #abb2bf;
+}
+.syntax--ng.syntax--pipe,
+.syntax--ng.syntax--operator {
+  color: #abb2bf;
+}
+.syntax--ng.syntax--tag {
+  color: #56b6c2;
+}
+.syntax--ng.syntax--attribute-with-value .syntax--attribute-name {
+  color: #e5c07b;
+}
+.syntax--ng.syntax--attribute-with-value .syntax--string {
+  color: #c678dd;
+}
+.syntax--ng.syntax--attribute-with-value .syntax--string.syntax--begin,
+.syntax--ng.syntax--attribute-with-value .syntax--string.syntax--end {
+  color: #abb2bf;
+}
+.syntax--source.syntax--php .syntax--class.syntax--bracket {
+  color: #abb2bf;
+}
+/*
+   This defines styling rules for syntax classes.
+
+   See the naming conventions for a list of syntax classes:
+   https://flight-manual.atom.io/hacking-atom/sections/syntax-naming-conventions
+
+   When styling rules conflict:
+   - The last rule overrides previous rules.
+   - The rule with most classes and pseudo-classes overrides the last rule.
+*/
+.syntax--keyword {
+  color: #c678dd;
+}
+.syntax--keyword.syntax--type {
+  color: #56b6c2;
+}
+.syntax--keyword.syntax--function {
+  color: #e06c75;
+}
+.syntax--keyword.syntax--variable {
+  color: #e06c75;
+}
+.syntax--entity {
+  color: #abb2bf;
+}
+.syntax--entity.syntax--parameter {
+  color: #abb2bf;
+}
+.syntax--entity.syntax--support {
+  color: #e06c75;
+}
+.syntax--entity.syntax--decorator:last-child {
+  color: #61afef;
+}
+.syntax--entity.syntax--label {
+  text-decoration: underline;
+}
+.syntax--entity.syntax--function {
+  color: #61afef;
+}
+.syntax--entity.syntax--operator {
+  color: #61afef;
+}
+.syntax--entity.syntax--operator.syntax--symbolic {
+  color: #abb2bf;
+}
+.syntax--entity.syntax--type {
+  color: #56b6c2;
+}
+.syntax--entity.syntax--tag {
+  color: #e06c75;
+}
+.syntax--entity.syntax--attribute {
+  color: #d19a66;
+}
+.syntax--punctuation {
+  color: #abb2bf;
+}
+.syntax--punctuation.syntax--accessor {
+  color: #abb2bf;
+}
+.syntax--punctuation.syntax--accessor.syntax--member,
+.syntax--punctuation.syntax--accessor.syntax--scope {
+  color: #c678dd;
+}
+.syntax--punctuation.syntax--embedded {
+  color: #c678dd;
+}
+.syntax--string {
+  color: #98c379;
+}
+.syntax--string.syntax--immutable {
+  color: #98c379;
+}
+.syntax--string.syntax--part {
+  color: #56b6c2;
+}
+.syntax--string.syntax--interpolation {
+  color: #c678dd;
+}
+.syntax--string.syntax--regexp {
+  color: #98c379;
+}
+.syntax--string.syntax--regexp.syntax--language {
+  color: #c678dd;
+}
+.syntax--string.syntax--regexp.syntax--variable {
+  color: #61afef;
+}
+.syntax--string.syntax--regexp.syntax--punctuation {
+  color: #c678dd;
+}
+.syntax--constant {
+  color: #d19a66;
+}
+.syntax--constant.syntax--character {
+  color: #98c379;
+}
+.syntax--constant.syntax--character.syntax--escape {
+  color: #98c379;
+}
+.syntax--constant.syntax--character.syntax--code {
+  color: #56b6c2;
+}
+.syntax--text {
+  color: #abb2bf;
+}
+.syntax--markup.syntax--heading {
+  color: #e06c75;
+}
+.syntax--markup.syntax--list.syntax--punctuation {
+  color: #e06c75;
+}
+.syntax--markup.syntax--quote {
+  color: #5c6370;
+  font-style: italic;
+}
+.syntax--markup.syntax--bold {
+  color: #d19a66;
+  font-weight: bold;
+}
+.syntax--markup.syntax--italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.syntax--markup.syntax--underline {
+  color: #56b6c2;
+  text-decoration: underline;
+}
+.syntax--markup.syntax--strike {
+  color: #e06c75;
+}
+.syntax--markup.syntax--raw {
+  color: #98c379;
+}
+.syntax--markup.syntax--link {
+  color: #56b6c2;
+}
+.syntax--markup.syntax--alt {
+  color: #61afef;
+}
+.syntax--markup.syntax--inserted {
+  color: #98c379;
+}
+.syntax--markup.syntax--inserted .syntax--punctuation {
+  color: #98c379;
+}
+.syntax--markup.syntax--highlighted {
+  color: #98c379;
+}
+.syntax--markup.syntax--highlighted .syntax--punctuation {
+  color: #98c379;
+}
+.syntax--markup.syntax--deleted {
+  color: #e06c75;
+}
+.syntax--markup.syntax--deleted .syntax--punctuation {
+  color: #e06c75;
+}
+.syntax--markup.syntax--changed {
+  color: #c678dd;
+}
+.syntax--markup.syntax--changed .syntax--punctuation {
+  color: #c678dd;
+}
+.syntax--markup.syntax--commented {
+  color: #5c6370;
+}
+.syntax--markup.syntax--commented .syntax--punctuation {
+  color: #5c6370;
+}
+.syntax--comment {
+  color: #5c6370;
+  font-style: italic;
+}
+.syntax--comment.syntax--caption {
+  color: #6a7181;
+  font-weight: bold;
+}
+.syntax--comment.syntax--term {
+  color: #707989;
+}
+.syntax--comment.syntax--punctuation {
+  color: #5c6370;
+  font-weight: normal;
+}
+.syntax--invalid:not(.syntax--punctuation).syntax--illegal {
+  color: white !important;
+  background-color: #e05252 !important;
+}
+.syntax--invalid:not(.syntax--punctuation).syntax--deprecated {
+  color: #523d14 !important;
+  background-color: #e0c285 !important;
+}
+.syntax--source.syntax--css .syntax--entity.syntax--function {
+  color: #828997;
+}
+.syntax--source.syntax--css .syntax--entity.syntax--function.syntax--support {
+  color: #56b6c2;
+}
+.syntax--source.syntax--css .syntax--entity.syntax--selector {
+  color: #d19a66;
+}
+.syntax--source.syntax--css .syntax--entity.syntax--selector.syntax--tag {
+  color: #e06c75;
+}
+.syntax--source.syntax--css .syntax--entity.syntax--selector.syntax--id {
+  color: #61afef;
+}
+.syntax--source.syntax--css .syntax--entity.syntax--property {
+  color: #828997;
+}
+.syntax--source.syntax--css .syntax--entity.syntax--property.syntax--support {
+  color: #abb2bf;
+}
+.syntax--source.syntax--css .syntax--entity.syntax--variable {
+  color: #e06c75;
+}
+.syntax--source.syntax--css .syntax--constant {
+  color: #828997;
+}
+.syntax--source.syntax--css .syntax--constant.syntax--support {
+  color: #abb2bf;
+}
+.syntax--source.syntax--css .syntax--constant.syntax--numeric {
+  color: #d19a66;
+}
+.syntax--source.syntax--css .syntax--constant.syntax--media {
+  color: #d19a66;
+}
+.syntax--source.syntax--css .syntax--constant.syntax--color {
+  color: #d19a66;
+}
+.syntax--source.syntax--css .syntax--constant.syntax--offset {
+  color: #abb2bf;
+}
+.syntax--source.syntax--css .syntax--constant.syntax--attribute-value {
+  color: #98c379;
+}
+.syntax--source.syntax--css .syntax--punctuation.syntax--selector {
+  color: #d19a66;
+}
+.syntax--source.syntax--css .syntax--punctuation.syntax--selector.syntax--wildcard {
+  color: #e06c75;
+}
+.syntax--source.syntax--css .syntax--punctuation.syntax--selector.syntax--id {
+  color: #61afef;
+}
+.syntax--source.syntax--css .syntax--punctuation.syntax--selector.syntax--attribute {
+  color: #abb2bf;
+}
+</style>
+        </head>
+        <body class='markdown-preview' data-use-github-style><h1 id="applications-and-user-actions-lesson-plan">Applications and User Actions Lesson Plan</h1>
+<p>The lesson plan considers the significance of applications as valuable sources of user interactions that can act as valuable and powerful evidence within the legal process. The active lesson plan scaffolds leaners in developing understanding and awareness around the <strong>value of applications</strong> in terms of <strong>user interactions</strong> and this is relevant to Forensics. A <a href="../resources/application.m4v">overview video</a> outlines the structure of the active lesson plan.</p>
+<blockquote>
+<p>Application forensics is the process of establishing a data-centric theory of operation for a specific application. The goal of the analysis is to objectively establish causal dependencies between data input and output, as a function of the user interactions with the application. Depending on whether an application is an open or closed source and on the level of the accompanying documentation, the analytical effort required can vary from reading detailed specifications to reverse engineering code, data structures and communication protocols, to performing time-consuming black box differential analysis experiments. Alternatively, forensic tool vendors may license code from the application vendor to gain access to the proprietary data structures. The big advantage of analysing applications is that we have a better chance of observing and documenting direct evidence of user actions, which is of primary importance to the legal process.
+<a href="https://www.cybok.org/media/downloads/Forensics_v1.0.1.pdf">CyBOK Forensic Knowledge Area. Pg 23.</a></p>
+</blockquote>
+<h2 id="structure">Structure</h2>
+<p>Learners complete <strong>FOUR</strong> blocks of activities that are designed to support them in appreciating the significance of applications in terms of repositories of user interactions. Using real-world applications and a relevant case, instructors support learners through the following activity blocks:</p>
+<ol>
+<li><p><strong>Application Forensics.</strong> The first block of activities supports learners in appreciating the benefit and risks to application forensics.</p>
+</li>
+<li><p><strong>Case Study: Web Browser.</strong> The second block of activities supports learners in the valuable information that can be learned from a popular application with individuals.</p>
+</li>
+<li><p><strong>Study of Web Search History.</strong> The third and block of activities will afford learners the opportunity to apply knowledge from prior activities and relate to a relevant case.</p>
+</li>
+<li><p><strong>Application Usage as Evidence.</strong> The fourth and final block is used to conclude the active lesson plan and is focused on aligning the outcomes of the activities with material presented in the CyBOK.</p>
+</li>
+</ol>
+<h3 id="qualification-level">Qualification Level</h3>
+<p>The active lesson plan can be adjusted to accommodate many of the United Kingdom qualification levels. In its current form the active lesson plan is targeting learners at Levels 6 and 7 on the Regulated Qualifications Framework (RQF) and Credit and Qualifications Framework (CQFW) in England and Wales, Levels 10 and 11 on the Scottish Credit and Qualifications Framework (SCQF) and Levels 6 and 7 on European Qualifications Framework (EQF).</p>
+<p>The active lesson plan does not expect nor require an individual to posses significant knowledge in Computing Science, Mathematics or Law.</p>
+<hr>
+<h2 id="application-forensics">Application Forensics</h2>
+<p>The <strong>FIRST</strong> block of activities supports learners in appreciating the benefit and risks to application forensics.</p>
+<h3 id="block-structure">Block Structure</h3>
+<p>The block is structured as follows:</p>
+<ul>
+<li><p><strong>User Interactions and Applications.</strong> The lecturer or instructor provides a brief lecture or overview on the significance of user interactions with application as they relate to the legal process.</p>
+</li>
+<li><p><strong>Unicorn Pitch.</strong> Learners will form teams and pitch a successful application that will enable to become a Unicorn start-up, that is a rare and valuable company.</p>
+</li>
+<li><p><strong>Blueprint for Good Applications from the Forensic Investigator Perspective.</strong> Learners will form new teams to identify common criteria for permitting applications in an Enterprise from the perspective of a Forensics investigator.</p>
+</li>
+<li><p><strong>Unicorns vs Investigators.</strong> Learners will identify the opportunities and obstacles in using application data as part of a forensics investigation.</p>
+</li>
+<li><p><strong>Class Discussion on Using Application Data.</strong> The class will consider and discuss some of the common potential opportunities and obstacles identified by teams.</p>
+</li>
+<li><p><strong>Opportunities and Obstacles in using Application Data.</strong> The activity block will conclude by relating activity outputs with material in the CyBOK.</p>
+</li>
+</ul>
+<hr>
+<h3 id="user-interactions-and-applications">User Interactions and Applications.</h3>
+<p>The session begins with a brief lecture or overview on the significance of user interactions with application as they relate to the legal process.</p>
+<p>Learners will use this material to appreciate the opportunities and challenges around application forensics.</p>
+<h4 id="instructions">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li><p>Present their own admissibility lecture or provide in advance for students to consider.</p>
+</li>
+<li><p>Permit time for questions to address any misconceptions or issues with the material presented.</p>
+</li>
+</ol>
+<hr>
+<h3 id="unicorn-pitch">Unicorn Pitch</h3>
+<p>The aim of the activity is to focus learners on considering their prior knowledge and thoughts, in terms of building a successful start-up application. The expectation is that learners will come to consider applications from primarily two perspectives: that of the user and that of the provider.</p>
+<p>In terms of the user, in what the qualities and feature they seek and what would engage them with the application. In terms of the business, what drives individuals to engage with their application and business model they will employ. These aspects relate back to the CyBOK in terms of ensuring learners appreciate that while valuable user data may be generated it may not be easily accessible due to business model choices.</p>
+<h4 id="instructions-1">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li><p>Advise learners they have to self-organise into teams of no more than <strong>FOUR</strong> members and no less than <strong>THREE</strong> members.</p>
+</li>
+<li><p>Advise teams they have <strong>30</strong> minutes to produce a <strong>TWO</strong> minute pitch with accompanying single presentation slide for an application for a given market that will enable them as start-up to be classed as a Unicorn. A company that is effectively rare given its perceived value. Advise learners they have few restrictions, other than the application must be focused at the consumer market and most be realistic in its claims and benefits, for example the application can not predict future lottery results.</p>
+</li>
+<li><p>Wander between teams as they form and create their ideas and companies. Motivate learners to consider the perspective of users and of business owners.</p>
+</li>
+<li><p>Collect the presentation slides from teams and collate them.</p>
+</li>
+<li><p>Use a <a href="https://www.google.com/search?q=random+number+generator">random number generator</a> to randomly select teams to present. The lecturer may favour to select teams on what they have observed as to shape the discussion in a particular direction.</p>
+</li>
+<li><p>Remind teams they have <strong>TWO</strong> minutes to present and led the class in applause by clapping the teams off when time has elapsed.</p>
+</li>
+<li><p>Continue to call teams until a sufficient number of pitches have been presented.</p>
+</li>
+<li><p>Advise teams to spend <strong>10</strong> minutes reflecting on the pitches they have observed as well as their pitch. Advise them to identify <strong>FIVE</strong> qualities that make for a successful application, either from the perspective of user engagement or business rationale.</p>
+</li>
+<li><p>Issue a <strong>ONE</strong> minute warning before time elapses.</p>
+</li>
+<li><p>Collect the <strong>FIVE</strong> qualities from teams and advise them the material will be used in subsequent activities.</p>
+</li>
+<li><p>Permit time for questions to address any misconceptions or issues that emerged during the session.</p>
+</li>
+</ol>
+<h4 id="useful-links">Useful links</h4>
+<ul>
+<li><a href="https://www.google.com/search?q=random+number+generator">Random Number Generator</a></li>
+</ul>
+<hr>
+<h3 id="blueprint-for-good-applications-from-the-forensic-investigator-perspective">Blueprint for Good Applications from the Forensic Investigator Perspective</h3>
+<p>The aim of the activity is to motivate learners to consider what would make a good application from the perspective of a forensic investigator. The expectation is that learners will come to consider that will extensive user engagement and logging may prove valuable data, gaining access to that data, how it is generated and the level of volume also presents challenges.</p>
+<h4 id="instructions-2">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li><p>Advise learners they have to self-organise into teams of no more than <strong>FOUR</strong> members and no less than <strong>THREE</strong> members. The members of the team should be different than the prior activity. The rationale is this will afford learners an opportunity to interact with other members of the class but also present a break from the though-process in the previous activity.</p>
+</li>
+<li><p>Advise teams they have <strong>30</strong> minutes to produce a <strong>TWO</strong> minute pitch with accompanying single presentation slide for criteria for permissible applications for a large multinational company. Emphasise to teams they are producing criteria from the perspective of a forensics investigator, not from the perspective of a manager or security engineer.</p>
+</li>
+<li><p>Wander between teams as they form and create their ideas and companies. Support learners in reflecting and balancing the challenge of extensive user engagement data and gaining accessing it.</p>
+</li>
+<li><p>Collect the presentation slides from teams and collate them.</p>
+</li>
+<li><p>Use a <a href="https://www.google.com/search?q=random+number+generator">random number generator</a> to randomly select teams to present. The lecturer may favour to select teams on what they have observed as to shape the discussion in a particular direction.</p>
+</li>
+<li><p>Remind teams they have <strong>TWO</strong> minutes to present and led the class in applause by clapping the teams off when time has elapsed.</p>
+</li>
+<li><p>Continue to call teams until a sufficient number of pitches have been presented.</p>
+</li>
+<li><p>Advise teams to spend <strong>10</strong> minutes reflecting on the pitches they have observed as well as their pitch. Advise them to identify <strong>FIVE</strong> common criteria that would satisfy most of the pitches they observed.</p>
+</li>
+<li><p>Issue a <strong>ONE</strong> minute warning before time elapses.</p>
+</li>
+<li><p>Collect the <strong>FIVE</strong> common criteria  from teams and advise them the material will be used in subsequent activities.</p>
+</li>
+<li><p>Permit time for questions to address any misconceptions or issues that emerged during the session.</p>
+</li>
+</ol>
+<h4 id="useful-links-1">Useful links</h4>
+<ul>
+<li><a href="https://www.google.com/search?q=random+number+generator">Random Number Generator</a></li>
+</ul>
+<hr>
+<h3 id="unicorns-vs-investigators">Unicorns vs Investigators</h3>
+<p>Teams will use their collective notes, their own research and other team pitches to identify the opportunities and challenges around using application data as part of a forensics investigation.</p>
+<h4 id="instructions-3">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li><p>Advise teams that they are to produce a <strong>ONE</strong> slide presentation that covers <strong>THREE</strong> opportunities for application data in forensics and <strong>THREE</strong> obstacles or challenges in using that application.</p>
+</li>
+<li><p>Issue the start-up pitches and common criteria produced by all teams from the prior activities to the class. Advise teams they have <strong>30</strong> minutes to produce their slides and can use their own research, collective notes and outputs from prior activities to produce the slide.</p>
+</li>
+<li><p>As teams produce their slides, the lecturer should wander between groups to observe discussion and actions.</p>
+</li>
+<li><p>Collect the presentation slides from teams in preparation of the next activity.</p>
+</li>
+</ol>
+<h4 id="materials">Materials</h4>
+<ul>
+<li><a href="../application/identifyOpportunitiesAndChallenges.html">Activity Sheet</a></li>
+</ul>
+<hr>
+<h3 id="class-discussion-on-using-application-data">Class Discussion on Using Application Data</h3>
+<p>Teams will present the opportunities and obstacles they have identified from the previous activity as well as engage in a discussion with the rest of the class.</p>
+<h4 id="instructions-4">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li><p>Use a <a href="https://www.google.com/search?q=random+number+generator">random number generator</a> to randomly select teams to present. The lecturer may favour to select teams on what they have observed as to shape the discussion in a particular direction.</p>
+</li>
+<li><p>Advise teams they have <strong>TWO</strong> minutes to present and they are only expected to present a <strong>SINGLE</strong> opportunity or obstacle, but not one that has already been raised.</p>
+</li>
+<li><p>Teams that do not have a unique opportunity or obstacle should be clapped-off without presenting to inject some engagement and humour into the session.</p>
+</li>
+<li><p>After a sufficient number of presentations, for example <strong>THREE</strong> presentations, pause and engage the wider class and discuss some of what has been presented.</p>
+</li>
+<li><p>Continue to ask for teams to present either based on the discussion or what they have observed when teams were producing their slides or using a <a href="https://www.google.com/search?q=random+number+generator">random number generator</a>.</p>
+</li>
+</ol>
+<h4 id="useful-links-2">Useful links</h4>
+<ul>
+<li><a href="https://www.google.com/search?q=random+number+generator">Random Number Generator</a></li>
+</ul>
+<hr>
+<h3 id="opportunities-and-obstacles-in-using-application-data">Opportunities and Obstacles in using Application Data</h3>
+<p>The lecturer should provide a brief overview of the themes identified in the prior activities and relate them to material presented in the <a href="https://www.cybok.org">CyBOK</a>.</p>
+<h4 id="instructions-5">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li><p>Advise learners of some of the themes that have emerged from consideration of the opportunities and obstacles in using application data for forensic purposes.</p>
+</li>
+<li><p>Relate the material to that discussed in the CyBOK.</p>
+</li>
+<li><p>Provide space for learners to raise any questions or address any gaps in understanding.</p>
+</li>
+</ol>
+<h4 id="useful-links-3">Useful links</h4>
+<ul>
+<li><a href="https://www.cybok.org">CyBOK</a></li>
+</ul>
+<hr>
+<h2 id="case-study-web-browser">Case Study: Web Browser</h2>
+<p>The <strong>SECOND</strong> block of activities is designed to support learners in the valuable information that can be learned from a popular application with individuals.</p>
+<h3 id="block-structure-1">Block structure</h3>
+<p>The block is structured as follows:</p>
+<ul>
+<li><p><strong>History of the Web Browser.</strong> Instructor provides a brief lecture on the significant concepts of admissibility of evidence.</p>
+</li>
+<li><p><strong>Produce Summary of Case.</strong> Learners produce a summary of two cases that will act as the basis for subsequent activities.</p>
+</li>
+<li><p><strong>Overview of Case.</strong> Lecturer or instructor to provide an overview of the cases as to ensure all learners are starting with the same knowledge.</p>
+</li>
+<li><p><strong>Friend Flummox</strong>. Learners are required to devise an exam question that will challenge a peer in the class on the topic of what are the sources of forensically interesting material from a web browser.</p>
+</li>
+<li><p><strong>Themes from Friend Flummox Activity</strong>. Instructor leads class discussion and activity on the themes that emerged from the exam questions.</p>
+</li>
+<li><p><strong>Web Browser Forensic Sources</strong>. Instructor provides brief lecture on six main sources of forensic relevant data for web browsers.</p>
+</li>
+</ul>
+<hr>
+<h3 id="history-of-the-web-browser">History of the Web Browser</h3>
+<p>The session begins with a brief lecture on the evolution and changes web browsers. The expectation is that learners will come to appreciate that the aspects that are valuable to forensic investigators, such as capturing user engagement, have been fairly consistent over a number of years and have only increased.</p>
+<p>Learners will use this material to appreciate the opportunities and challenges in using such application data.</p>
+<h4 id="instructions-6">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li><p>Present their own admissibility lecture or provide in advance for students to consider.</p>
+</li>
+<li><p>Permit time for questions to address any misconceptions or issues with the material presented.</p>
+</li>
+</ol>
+<hr>
+<h3 id="produce-summary-of-case">Produce Summary of Case</h3>
+<p>The lecturer or instructor should advise learners to produce a summary of the case that will act as the foundation for activities.</p>
+<p>Optional: the lecturer or instructor can set this as an entry ticket activity as in they are required to complete in advance of session.</p>
+<h4 id="materials-1">Materials</h4>
+<ul>
+<li><a href="../application/produceSummary.html">Activity Sheet</a></li>
+</ul>
+<hr>
+<h3 id="overview-of-case">Overview of Case</h3>
+<p>The lecturer or instructor should provide a brief summary of the <em>Commonwealth of Massachusetts v Brain Walshe</em> case to the class.</p>
+<p>The motivation for providing the overview is to:</p>
+<ul>
+<li><p>address any misconceptions or gaps in understanding that students may have developed when considering the case in advance.</p>
+</li>
+<li><p>support those students that have no adequately considered the case in advance as to ensure they can effectively contribute to the activity.</p>
+</li>
+</ul>
+<h4 id="materials-2">Materials</h4>
+<ul>
+<li><a href="caseSummary.html">Case Summary</a></li>
+</ul>
+<hr>
+<h3 id="search-history-of-brain-walshe">Search History of Brain Walshe</h3>
+<p>The lecture or instructor will show a video of search history being read to the defendant Brain Walshe. Learners will watch the video and note down some of the search history.</p>
+<p>The rationale is to captivate and engage learners with the value of search history and what it can contribute to the legal process.</p>
+<h4 id="instructions-7">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li><p>Advise learners they are going to watch a video clip of Brain Walshe being read his search history. Learners should note the search history mentioned and will form pairs and discuss the search history.</p>
+</li>
+<li><p>Issue the <a href="/searchHistoryActivitySheet.html">Search History Activity Sheet</a> to learners.</p>
+</li>
+<li><p>Play the <a href="https://www.youtube.com/watch?v=wUFT99Pw0IY">Brain Walshe Search History</a> video clip. Advise learners to reflect on the search history as they watch the video.</p>
+</li>
+<li><p>Advise learners to form pairs and spend <strong>10</strong> minutes comparing search history and discussing any notes and thoughts they had on the recovered search history.</p>
+</li>
+<li><p>Open an audience response system activity, such as <a href="https://www.mentimeter.com">Mentimeter</a>, ask learners to submit some of the themes of the discussion had between pairs.</p>
+</li>
+<li><p>Steer the conversation towards the significance of application data being used to signal individual intention, but also how data could be interpreted and if there are other explanations.</p>
+</li>
+<li><p>Advise learners they have <strong>FIVE</strong> minutes to reflect on the activity and should make notes. Suggest to learners to reflect on that search history is just one aspect of a web browser and to consider what other aspects may provide valuable data.</p>
+</li>
+</ol>
+<h4 id="materials-3">Materials</h4>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=wUFT99Pw0IY">Brain Walshe Search History</a></li>
+<li><a href="/searchHistoryActivitySheet.html">Search History Activity Sheet</a></li>
+<li><a href="https://www.mentimeter.com">Mentimeter</a></li>
+</ul>
+<p>--</p>
+<h3 id="friend-flummox">Friend Flummox</h3>
+<p>An engaging activity to motivate learners to engage with the different potential sources of data from web browsers that may be valuable to a forensics investigation. Learners are required to devise an exam question that will challenge a peer in the class on the topic.</p>
+<p>The goal of the activity is to focus learners and to generate curiosity as well as to provide an opportunity for learners to develop interpersonal and communication skills.</p>
+<h4 id="instructions-8">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li>Advise class that they are required to create an exam question that probes understanding of sources of relevant data from a web browser to a forensics investigation. The question should challenge peers.</li>
+</ol>
+<p>Learners can be as creative as they want in the design of the question, for example they do not need to restrict themselves to text.</p>
+<ol start="2">
+<li><p>Give the learners around <strong>TEN</strong> minutes to create the question.</p>
+</li>
+<li><p>Maintain and ensure energy in the room by walking through the class and advising when time is running out.</p>
+</li>
+<li><p>Instruct learners to form pairs or trios and exchange their exam questions. The pairs or trios then have <strong>TEN</strong> minutes to tackle the question. The questions do not need to be in exam conditions, learners can have fun and help each other out.</p>
+</li>
+<li><p>Collect all the exam questions from the learners.</p>
+</li>
+</ol>
+<h4 id="materials-4">Materials</h4>
+<ul>
+<li><a href="../general/friendFlummox.html">Activity Sheet</a></li>
+</ul>
+<hr>
+<h3 id="themes-from-friend-flummox-activity">Themes from Friend Flummox Activity</h3>
+<p>The aim of the prior activity is to drive curiosity and interest in the challenge of sources of relevant data from a web browser to a forensics investigation. The lecturer should now focus the class by considering the themes that emerged in the exam questions and steer learners to areas of focus.</p>
+<h4 id="instructions-9">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li><p>Ask learners to nominate any particular good exam questions. Nominators should present the exam question to the class and state the advantages of the approach.</p>
+</li>
+<li><p>Open the question to the class and ask them to comment on the question and how they would approach it.</p>
+</li>
+<li><p>Repeat process until a number of questions have been considered. Open an audience response system activity, such as <a href="https://www.mentimeter.com">Mentimeter</a>, ask learners to submit some of the themes that emerge from these questions in terms of areas of focus.</p>
+</li>
+<li><p>Steer the consideration of themes along the significance of the different sources, such as <em>search history</em>, <em>form data</em>, <em>temporary files</em>, <em>downloaded files</em>, <em>HTML5 local storage</em> and <em>cookies</em>.</p>
+</li>
+<li><p>Permit time for questions to address any misconceptions or issues with the material presented.</p>
+</li>
+</ol>
+<h4 id="useful-links-4">Useful links</h4>
+<ul>
+<li><a href="https://www.mentimeter.com">Mentimeter</a></li>
+</ul>
+<hr>
+<h3 id="web-browser-forensic-sources">Web Browser Forensic Sources</h3>
+<p>The block should conclude by relating the outcomes from the prior activities to material in the <a href="https://www.cybok.org">CyBOK</a>.</p>
+<h4 id="instructions-10">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li><p>Present their own lecture on the importance of guidelines or provide material in advance for learners to consider.</p>
+</li>
+<li><p>Relate the material presented back to the forensic sources interesting to forensics investigators documented in the <a href="https://www.cybok.org">CyBOK</a>.</p>
+</li>
+<li><p>Permit time for questions to address any misconceptions or issues with the material presented.</p>
+</li>
+</ol>
+<hr>
+<h2 id="study-of-web-search-history">Study of Web Search History</h2>
+<p>The <strong>THIRD</strong> and block of activities will afford learners the opportunity to apply knowledge from prior activities and relate to a relevant case.</p>
+<h3 id="block-structure-2">Block Structure</h3>
+<p>The block is structured as follows:</p>
+<ul>
+<li><p><strong>Produce Summary of Case Study.</strong> Learners are required to produce a summary of the case being considered in the class.</p>
+</li>
+<li><p><strong>Overview of State of Indiana vs Gaylyn Morris</strong> Instructor provides an overview of the case to the class to ensure every learner is starting from the same point.</p>
+</li>
+<li><p><strong>Gathering and Interpreting Application Usage as Evidence.</strong>
+Learners then have to extract fictional evidence from application usage for the case study, that has been generated by their peers.</p>
+</li>
+<li><p><strong>Practice Sharing.</strong>
+Learners nominate and share strong or interesting examples they observed from the previous activity.</p>
+</li>
+<li><p><strong>Class Collective Identification of Emerging Themes of Using Application Usage Data.</strong>
+Learners consider as a class the emerging themes that comes from using application usage as evidence.</p>
+</li>
+</ul>
+<hr>
+<h3 id="using-application-usage-data-as-evidence">Using Application Usage Data as Evidence</h3>
+<p>The session begins with a brief lecture or overview on using application usage data as evidence as part of the legal process.</p>
+<p>Learners will use this material to appreciate the opportunities and challenges around application forensics.</p>
+<h4 id="instructions-11">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li><p>Present their own using application usage data as evidence lecture or provide in advance for students to consider.</p>
+</li>
+<li><p>Permit time for questions to address any misconceptions or issues with the material presented.</p>
+</li>
+</ol>
+<hr>
+<h3 id="produce-summary-of-case-study">Produce Summary of Case Study</h3>
+<p>The lecturer or instructor should advise learners to produce a summary of the case that will act as the foundation for activities.</p>
+<p>Optional: the lecturer or instructor can set this as an entry ticket activity as in they are required to complete in advance of session.</p>
+<h4 id="materials-5">Materials</h4>
+<ul>
+<li><a href="../application/produceSummary2.html">Activity Sheet</a></li>
+</ul>
+<hr>
+<h3 id="overview-of-state-of-indiana-vs-gaylyn-morris">Overview of State of Indiana vs Gaylyn Morris</h3>
+<p>The lecturer or instructor should provide a brief summary of the <em>State of Indiana vs Gaylyn Morris</em> case to the class.</p>
+<p>The motivation for providing the overview is to:</p>
+<ul>
+<li><p>address any misconceptions or gaps in understanding that students may have developed when considering the case in advance.</p>
+</li>
+<li><p>support those students that have no adequately considered the case in advance as to ensure they can effectively contribute to the activity.</p>
+</li>
+</ul>
+<h4 id="materials-6">Materials</h4>
+<ul>
+<li><a href="../application/caseSummary2.html">Case Summary</a></li>
+</ul>
+<hr>
+<h3 id="gathering-and-interpreting-application-usage-as-evidence">Gathering and Interpreting Application Usage as Evidence</h3>
+<p>The aim of the activity is for the learners to gain insight into how to analysis and consider the search history of an individual from the perspective of a forensics investigation.</p>
+<h4 id="instructions-12">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li><p>Issue the <a href="../application/stumpActivitySheet.html">Stump Activity Sheet</a> to learners.</p>
+</li>
+<li><p>Advise learners they are going to create an application usage trail using
+a web browser for the accused in the case study. Advise learners that in generating the trail they should aspects that have been previously considered, such as misinterpretation of data points, i.e. interpreting data of usage from one perspective without considering an alternative, as well as anti-forensics techniques, i.e. purposely counterfeiting exculpatory evidence.</p>
+</li>
+<li><p>Advise learners that the class will vote on particularly creative, engaging and intelligent attempts at the activity.</p>
+</li>
+<li><p>Advise learners they have <strong>30</strong> minutes to generate the application usage data. Inform learners they will be issued a <strong>FIVE</strong> minute warning when time is nearly elapsed. Learners can generate the application data usage trail via:</p>
+<ul>
+<li><strong>Pen and paper.</strong> Learners can generate the application usage data using pen and paper and completing a <a href="mockApplicationDataUsageSheet.html">Mock Application Data Usage Sheet</a> by hand.</li>
+<li><strong>Spreadsheet.</strong> Learns can generate the application usage data using a digital system, such as a laptop or tablet, and completing a <a href="mockApplicationDataUsageSheet.html">Mock Application Data Usage Sheet</a> using a device.</li>
+<li><strong>Web browser and appropriate tool.</strong> Learners can use a web browser, but should be advised to wipe to factory settings and generate the data and use an appropriate tool to generate the data, such as <a href="https://github.com/obsidianforensics/hindsight">Hindsight</a>.</li>
+</ul>
+</li>
+<li><p>Walk through the class as learners perform their task and discuss the topic and the approach they are adopting. Issue each learner with a piece of paper and pen as they perform the task.</p>
+</li>
+<li><p>After time has elapsed, advise learners to write their favourite colour on the paper in big lettering.</p>
+</li>
+<li><p>Advise learners they are going to pair-up with another learner after time has elapsed. Inform them to wander around the class and pair-up with another learner that has the same favourite colour. If there any remaining learners, assign them to each other.</p>
+</li>
+<li><p>Advise learners to swap their application usage data with their new partner.</p>
+</li>
+<li><p>Advise learners they have <strong>15</strong> minutes to assemble a convincing trail of usage data from the data providing, keeping in mind the tactics the other learner may have performed to <strong>stump</strong> them. Inform learners they will be issued a <strong>ONE</strong> minute warning when time is nearly elapsed.</p>
+</li>
+<li><p>Advise pairs they have <strong>10</strong> minutes to exchange outlines of the trails uncovered and their interpretation of the data. Respective partners should communicate if this is correct or what the other has missed. Inform learners they will be issued a <strong>FIVE</strong> minute warning to swap around during the time.</p>
+</li>
+<li><p>Advise learners they can now choose to nominate their partner's stump, either because they observed a quality they would like to share with the class or discuss with the class. Advise learners if no-one nominates, pairs will be selected at random. Use an audience response system, such as <a href="https://www.mentimeter.com">Mentimeter</a>, or paper to collect nominations.</p>
+</li>
+<li><p>Select learners to present based on nominations or select learners if no nominations are received. Ask the learners to present their partner's stump and describe how they uncovered the trail, what their interpretation of it was and whether it is correct. Advise other learners to take notes as they observe the presentations.</p>
+</li>
+</ol>
+<h4 id="materials-7">Materials</h4>
+<ul>
+<li><a href="stumpActivitySheet.html">Stump Activity Sheet</a></li>
+<li><a href="mockApplicationDataUsageSheet.html">Mock Application Data Usage Sheet</a></li>
+<li><a href="https://www.mentimeter.com">Mentimeter</a></li>
+<li><a href="https://github.com/obsidianforensics/hindsight">Hindsight</a></li>
+<li>Pen and paper</li>
+</ul>
+<hr>
+<h3 id="class-collective-identification-of-emerging-themes-of-using-application-usage-data">Class Collective Identification of Emerging Themes of Using Application Usage Data</h3>
+<p>The aim is for the class to broadly identify emerging themes of using application data, specifically the elements of data that are valuable but also in terms of how these data points can be connected, in such a way that may be inaccurate and so must be carefully considered.</p>
+<h4 id="instructions-13">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li><p>Use a <a href="https://www.google.com/search?q=random+number+generator">random number generator</a> to randomly select pairs to present. The lecturer may favour to select pairs on what they have observed, rather than randomly, to demonstrate and discuss with the entire class any novel insights or gaps in understanding.</p>
+</li>
+<li><p>Briefly refresh the class on cases considered across the prior activities, emphasising examples of the data collected and how this has been interpreted.</p>
+</li>
+<li><p>Advise pairs they have <strong>FIVE</strong> minutes to reflect on the notes they have made from the prior activities. Advise them to speak to their partner to resolve any misconceptions and gaps.</p>
+</li>
+<li><p>After the time has elapsed, advise pairs they have <strong>10</strong> minutes to generate a shared note that highlights the key elements of application usage that can be learned from application forensics, concerns around interpretation and any misconceptions that neither can satisfactorily resolve.</p>
+</li>
+<li><p>Identify pairs at to random to stand-up and discuss <strong>ONE</strong> key element of application usage and concerns around interpretation of such usage from a forensics perspective. Ask one member of the pair to present it to the class while the other acts as note taker and writes the heading or name for the element on a white board.</p>
+</li>
+<li><p>Use an audience response system, such <a href="https://www.mentimeter.com">Mentimeter</a>, and ask the class if they have any additional thoughts around the strengths and concerns of using such elements of application usage data from a forensics perspective. Request the note taker to add some of the comments to the whiteboard.</p>
+</li>
+<li><p>Thank the pair of learners and identify another pair of learners. Advise the pair to share an element and concern, not previously discussed. Similarly, one learner should present while the other notes the heading on the whiteboard. The class should then be asked via an audience response system for any additional thoughts that the note taker can add to the board. Continue in this fashion until a sufficient number of elements have been considered.</p>
+</li>
+<li><p>Summaries the key elements devised by the class and emphasise the more significant elements provided by leaners.</p>
+</li>
+</ol>
+<h4 id="useful-links-5">Useful links</h4>
+<ul>
+<li><a href="https://www.mentimeter.com">Mentimeter</a></li>
+<li><a href="https://www.google.com/search?q=random+number+generator">Random Number Generator</a></li>
+</ul>
+<hr>
+<h2 id="application-usage-as-evidence">Application Usage as Evidence</h2>
+<p>The <strong>FOURTH</strong> and final block is used to conclude the active lesson plan and is focused on aligning the outcomes of the activities with material presented in the <a href="https://www.cybok.org/media/downloads/Forensics_v1.0.1.pdf">CyBOK</a>.</p>
+<h4 id="instructions-14">Instructions</h4>
+<p>The lecturer or instructor should:</p>
+<ol>
+<li><p>Briefly present again their own lecture on the use of hash functions to identify contraband or provide it in advance for students to consider.</p>
+</li>
+<li><p>Relate the presented material to the arguments, remarks and evidence provided by learners during the class debate to relevant material in the <a href="https://www.cybok.org/media/downloads/Forensics_v1.0.1.pdf">CyBOK</a>.</p>
+</li>
+<li><p>Provide an opportunity for learners to address questions and/or address any misconceptions.</p>
+</li>
+<li><p>Ask learners to complete the Quad Fold Activity.</p>
+</li>
+</ol>
+<h4 id="materials-8">Materials</h4>
+<ul>
+<li><a href="../general/quadFold.html">Quad Fold Activity</a></li>
+<li><a href="https://www.cybok.org/media/downloads/Forensics_v1.0.1.pdf">CyBOK</a></li>
+</ul></body>
+      </html>
