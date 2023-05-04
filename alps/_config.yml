@@ -16,7 +16,7 @@
 title: Active Learning Plans for Security (ALPS)
 description: Active Learning Plans for Security
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://ease.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.ease.ws" # the base hostname & protocol for your site, e.g. http://example.com
 repository: just-the-docs/just-the-docs # for github-metadata
 
 permalink: pretty
