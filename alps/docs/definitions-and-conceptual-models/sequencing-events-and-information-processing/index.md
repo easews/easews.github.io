@@ -1,0 +1,466 @@
+---
+layout: default
+title: Sequencing Events and Information Processing
+nav_order: 1
+parent: Definitions and Conceptual Models
+has_children: false
+---
+
+# Sequencing Events and Information Processing Active Lesson Plan
+This active lesson plan considers the **steps**, **processes** and **loops** an investigator performs when processing information as part of a digital investigation. An [overview video](../resources/sequence.m4v) outlines the structure of the active lesson plan.
+
+## Overview
+The [CyBOK presents the Cognitive Task Model from Pirolli & Card](https://www.cybok.org/media/downloads/Forensics_v1.0.1.pdf) as an approach to understand how digital investigators process information from external data sources to final presentation of evidence.
+
+This active lesson plan scaffolds and supports learners in devising their own cognitive task model before comparing and contrasting it with the model presented in the CyBOK. The rationale for this approach is for learners to actively engage with the cognitive process that investigators perform when   extracting and analysing evidence, rather than just learning about it from the CyBOK.
+
+### Structure
+Learners complete **FOUR** blocks of activities that are designed to support them in devising their own cognitive task model. Using a real-world case as a staring point, instructors support learning through the following activity blocks:
+
+1. **Cognitive Steps in Information Processing.** The first block of activities supports learners in devising and understanding the fundamental steps to process information from external data sources to the final presentation of evidence.
+
+2. **Processes.** The second block of activities supports learners in devising and understanding the abstraction and analytical processes that are used to progress between the major information processing steps (devised in the prior block of activities).
+
+3. **Loops.** The third block of activities supports learners in appreciating the analytical information processing loops required to refine and improve evidence.
+
+4. **Cognitive Task Model.** The fourth and final block of activities closes the lesson plan and learners consider the Cognitive Task Model from the CyBOK. Learners compare and contrast the model devised through activities in the lesson plan with that presented in the CyBOK.
+
+### Qualification Level
+The active lesson plan can be adjusted to accommodate many of the United Kingdom qualification levels. In its current form the active lesson plan is targeting learners at Levels 6 and 7 on the Regulated Qualifications Framework (RQF) and Credit and Qualifications Framework (CQFW) in England and Wales, Levels 10 and 11 on the Scottish Credit and Qualifications Framework (SCQF) and Levels 6 and 7 on European Qualifications Framework (EQF).
+
+The active lesson plan does not expect nor require an individual to posses significant knowledge in Computing Science, Mathematics or Law.
+
+### Case
+The basis of the activities in the lesson plan is the Commonwealth vs Michael Fiola case.
+
+Michael Fiola was an investigator for the Department of Industrial Accidents in the United States and was required to complete significant field work. The Department of Industrial Accidents provided Fiola with a laptop, cellular access card and data plan to support his role. Months after receiving the laptop, a red flag was received to state that Fiola consuming excessive data, some 4x more than others in a similar role. Consequently, Fiola’s laptop was brought in for review by the company, and illicit activity and material was identified and located on the system. Fiola’s employment was terminated and criminal charges where subsequently sought.
+
+---
+## Cognitive Steps in Information Processing
+The **FIRST** block of activities supports learners in devising and understanding the *fundamental steps to process information* from external data sources to the final presentation of evidence.
+
+
+### Block structure
+The block is structured as follows:
+
+* **Overview of Information Processing.** Instructor provides a brief lecture on the significant concepts of information processing and relevance in digital investigations.
+
+* **Produce Summary of Case Study.** Learners are required to produce a summary of the case being considered in the class.
+
+* **Overview of Michael Fiola Vs Commonwealth case.** Instructor provides an overview of the case to the class to ensure every learner is starting from the same point.
+
+* **Devising the Cognitive Steps for Information Processing in Digital Investigations.** Learners determining the fundamentals information processing steps in progressing from external data sources to presentation of evidence.
+
+* **Class collective development of Cognitive Steps.** The class collectively discuss and debate the various possible information steps before collectively agreeing on a set of steps.
+
+* **Cognitive Task Model.** An overview of cognitive task model generated by the class is generated and can be used in subsequent blocks of activities.
+
+---
+
+### Overview of Information Processing
+The session begins with a brief lecture on the significant concepts of information processing, in terms of triaging information as well as how to reduce and expand data where relevant within the context of digital investigations.
+
+Learners will use this material as well as consideration of the case study to intimately consider the major information processing steps in digital investigations.
+
+#### Instructions
+The lecturer or instructor should:
+
+1. Present their own information processing lecture or provide it in advance for students to consider.
+
+2. Permit time for questions to address any misconceptions or issues with the material presented.
+
+---
+
+### Produce Summary of Case Study
+The lecturer or instructor should advise learners to produce a summary of the case that will act as the foundation for activities.
+
+Optional: the lecturer or instructor can set this as an *entry ticket activity* as in they are required to complete in advance of session.
+
+#### Materials
+* [Activity Sheet](cognitive-steps-in-information-processing/produceSummary)
+
+---
+
+### Overview of Michael Fiola Vs Commonwealth case
+The lecturer or instructor at this point should provide a brief summary of the *Michael Fiola Vs Commonwealth* case to the class.
+
+The motivation for providing the overview is:
+
+* address any misconceptions or gaps in understanding that students may have developed when considering the case in advance.
+
+* support those students that have no adequately considered the case in advance as to ensure they can effectively contribute to the activity.
+
+#### Materials
+* [Case Summary](cognitive-steps-in-information-processing/caseSummary)
+
+---
+### Devising the Cognitive Steps for Information Processing in Digital Investigations
+Learners are expected to form pairs and identify the major steps in information processing within an investigation, starting with external data sources and progressing to presentation of the case.
+
+#### Instructions
+The lecturer or instructor should:
+
+1. Issue the activity sheet and advise pairs to consider the major steps in information processing of digital investigation in the context of the case.
+
+2. Advise pairs to consider the incomplete cognitive model and start to think about what intervening actions an investigator would take to present a case from a selection of initial data sources.
+
+3. Pairs should then consider the different possible actions and distill them down to central steps in the information processing of a case from the perspective of a digital investigator.
+
+3. Advise pairs that they have to produce a presentation justifying the steps they devise. If the class is small enough then all pairs can present. However, in the situation where the class is large, suggest some at random will present. This will ensure pairs are aware that they *may* have to present will ensure they are sufficiently motivated to complete the activity.
+
+4. Wander between pairs and consider the major steps that groups are identifying so that they can be called upon later during a class-wide presentations.
+
+6. Collect presentations and task models from students.
+
+#### Materials
+* [Activity Sheet](cognitive-steps-in-information-processing/)
+* [Incomplete Cognitive Model](resources/incompleteCognitiveModel)
+
+---
+
+### Class collective development of Cognitive Steps
+The aim is for learners to collectively agree the key steps in the task of information processing within the digital investigation.
+
+#### Instructions
+The lecturer or instructor should:
+
+1. Use a [random number generator](https://www.google.com/search?q=random+number+generator) to randomly select pairs to present. The lecturer may favour to select pairs on what they have observed, rather than randomly, to demonstrate and discuss with the entire class any novel insights or gaps in understanding.
+
+2. Present the starting and ending point for most digital investigation in terms of information processing, i.e. external data sources and presentation of the case.
+
+3. Ask class to offer the next step, the lecturer will then take answers and discuss them with the class. Asking for further possible steps before agreeing on a specific step. The lecturer should shape discussion and call on pairs, informed by the experience of wandering between the groups during the activity and what they observed.
+
+4. Use an audience response system, such [Mentimeter](https://www.mentimeter.com), to consider each step and to ensure the majority of the class collectively agrees on the steps.
+
+5. Conclude the session with a complete, class generated task model from all the case studies considered.
+
+#### Useful links
+* [Mentimeter](https://www.mentimeter.com)
+* [Random Number Generator](https://www.google.com/search?q=random+number+generator)
+
+---
+
+### Cognitive Task Model
+The aim is to familiarise learners with the cognitive task model and the various key steps in information processing from the perspective of a digital investigation procedure. Learners can appreciate the weaknesses and strengths between the presented model and those generated by the class.
+
+#### Instructions
+The lecturer or instructor should:
+
+1. Present the [Cognitive Task Model from Pirolli & Card](https://www.cybok.org/media/downloads/Forensics_v1.0.1.pdf) presented in the CyBOK.
+
+2. Ask learners to spend a few minutes to reflect on the differences between the model presented, the class wide
+generated model and the model generated in pairs.
+
+3. Provide an opportunity for learners to address questions and/or address any misconceptions.
+
+#### Useful links
+* [Cognitive Task Model from Pirolli & Card](https://www.cybok.org/media/downloads/Forensics_v1.0.1.pdf)
+
+
+---
+
+## Processes
+The **SECOND** block of activities supports learners in devising and understanding the *abstraction* and *analytical* processes that are used to progress between the major information processing steps (devised in the prior block of activities).
+
+### Block structure
+The block is structured as follows:
+
+* **Overview of Abstraction and Analysis Processes.** Instructor provides a brief lecture on the different *abstraction* and *analytical* processes.
+
+* **Devising the Abstraction Processes for Information Processing in Digital Investigations.** Learners are expected to identify and discuss various abstraction processes that support progression through the task model.
+
+* **Class collective development of abstraction processes.** The class collectively discuss and debate the various possible abstraction processes before collectively agreeing on a set of them.
+
+* **Cognitive Task Model with Abstraction Processes.** An overview of cognitive task model generated by the class is generated that is complemented with abstraction processes.
+
+* **Devising the Analytical Processes for Information Processing in Digital Investigations.** Learners are expected to identify and discuss various analytical processes that support progression through the task model.
+
+* **Class collective development of Analytical Processes.** The class collectively discuss and debate the various possible analytical processes steps before collectively agreeing on a set of them.
+
+* **Cognitive Task Model with Analytical Processes.** An overview of cognitive task model generated by the class is generated that is complemented with analytical processes.
+
+---
+### Overview of Abstraction and Analysis Processes
+The block begins with a brief lecture on the processes that support individuals in progressing from one step to the last step in the cognitive task model.
+
+Learners will use this material as well as consideration of the case study to intimately consider the processing activities in processing through steps in digital investigations.
+
+#### Instructions
+
+The lecturer or instructor should:
+
+1. Present their own processes lecture or provide in advance for students to consider.
+
+2. Permit time for questions to address any misconceptions or issues with the material presented.
+
+---
+
+### Devising the Abstraction Processes for Information Processing in Digital Investigations
+Learners revisit the Cognitive Task Model devised from the previous block of activities. Pairs now consider the processes that support investigators in abstracting from external data sources to final presentation through consideration of the case.
+
+Learners are expected to identify and discuss various abstraction processes that support progression through the task model. Learners should initially considers the steps from the *bottom-up*, i.e. from data sources.
+
+#### Instructions
+The lecturer or instructor should:
+
+1. Issue activity sheet and advise pairs they are going to consider a *log file* from the *Michael Fiola Vs Commonwealth case*.
+
+2. Advise pairs to work from external data sources, i.e. the log file, and progress through the steps of the model (devised from the earlier activity) to present a narrative of what happened based on the evidence they can extract.
+
+3. Pairs should then consider the different possible processes and distill them down to the most important processes that support them in abstracting from data sources to presentation of the final narrative.
+
+4. Advise pairs that they have to produce a presentation justifying the processes they devise. If the class is small enough then all pairs can present. However, in the situation where the class is large, suggest some at random will present. This will ensure pairs are aware that they may have to present will ensure they are sufficiently motivated to complete the activity.
+
+5. Wander between pairs and consider the major steps that groups are identifying so that they can be called upon later during a class-wide presentations.
+
+6. Collect presentations and updated task models with abstraction processes from learners.
+
+#### Materials
+* [Activity Sheet](processes/abstractionProcesses)
+* [Incomplete Cognitive Model (Abstraction Processes)](resources/incompleteAbstractionProcesses)
+* [Log File](resources/logFile).
+
+---
+
+### Class collective development of abstraction processes
+The aim is for the class to broadly devise the abstraction processes that are pertinent to the previously defined class-wide Cognitive Task Model for information processing in digital investigations.
+
+#### Instructions
+
+The lecturer or instructor should:
+
+1. Use a [random number generator](https://www.google.com/search?q=random+number+generator) to randomly select pairs to present. The lecturer may favour to select pairs on what they have observed, rather than randomly, to demonstrate and discuss with the entire class any novel insights or gaps in understanding.
+
+2. Present the starting and ending point for most digital investigation in terms of information processing, i.e. external data sources and presentation of the case, complemented with the initial and final abstraction processes.
+
+3. Advise the class that they are going to collectively devise the abstractions processes between each cognitive step though .
+
+4. Remind and discuss with the class the wider aim of abstraction processes in information process is to abstract from external data sources to higher-level understanding.
+
+5. Begin with consideration of the initial step in the Cognitive Task Model, notionally the consideration of external data sources.
+
+6. Reposition the Cognitive Task Model as a staircase and then ask the class for appropriate processes that would fit to progress up the staircase.
+
+7. Shape discussion as likely to receive many different suggestions. Having said that, the lecturer will want to note the others in front of the class as to use them later. For example, by recording them on a whiteboard.
+
+8. Continue in the approach until the most significant abstraction processes are detailed. It is not a concern if all are not documented or some are incomplete as a debriefing session follows the activity.
+
+9. Use an audience response system, such [Mentimeter](https://www.mentimeter.com), to consider each step and to ensure the majority of the class collectively agrees on the steps.
+
+10. The lecturer should then conclude the session with a complete, class generated Cognitive Task Model with abstraction processes.
+
+#### Useful links
+* [Mentimeter](https://www.mentimeter.com)
+* [Random Number Generator](https://www.google.com/search?q=random+number+generator)
+
+---
+
+### Cognitive Task Model with Abstraction Processes
+The class observe the second layer of the Cognitive Task Model, that is with key steps and abstraction processes. Pairs should be advise to compare and contrast the similarities and differences between the presented model and the model produced in class.
+
+#### Instructions
+
+The lecturer or instructor should:
+
+1. Present the Cognitive Task Model with abstraction processes, specifically the [Pirolli & Card model from the CyBOK](https://www.cybok.org/media/downloads/Forensics_v1.0.1.pdf).
+
+2. Ask learners to spend a few minutes to reflect on the differences between the model presented, the class wide generated model and their own pair model.
+
+3. Provide an opportunity for learners to address questions and/or address any misconceptions.
+
+#### Materials
+
+* [Pirolli & Card model from the CyBOK](https://www.cybok.org/media/downloads/Forensics_v1.0.1.pdf)
+
+---
+
+### Devising the Analytical Processes for Information Processing in Digital Investigations
+Learners revisit the Cognitive Task Model devised from the previous activities. Pairs now consider the processes that support investigators in progression downwards through the task model.
+
+Learners need to identify and discuss various analytical processes that support progression back through the task model. Learners should initially consider steps from the *top-down*, i.e. from presentation.
+
+
+#### Instructions
+The lecturer or instructor should:
+
+1. Issue the activity sheet and advise pairs they are now going to consider a *second log file* from the *Michael Fiola Vs Commonwealth case*.
+
+2. Issue the interview transcript with Michael Fiola. Advise pairs that the interview demonstrates that Fiola disputes the original allegation.
+
+3. Advise pairs they are going to present an alternative position or theory of what happened in the *Michael Fiola Vs Commonwealth case*.
+
+3. Pairs need to consider this alternative theory and are expected to work backward through the Cognitive Task Model, progressing from the initial presentation back to external data sources (the log file) to find supporting evidence for the alternative theory.
+
+4. Pairs should then consider the different possible processes and distill them down to the most important processes that support them in abstracting from data sources to presentation of the final narrative.
+
+5. Advise pairs that they have to produce a presentation justifying the processes they devise. If the class is small enough then all pairs can present. However, in the situation where the class is large, suggest some at random will present. This will ensure pairs are aware that they may have to present will ensure they are sufficiently motivated to complete the activity.
+
+6. Wander between pairs and consider the major steps that groups are identifying so that they can be called upon later during a class-wide presentations.
+
+7. Collect presentations and updated task models with abstraction processes from learners.
+
+#### Materials
+* [Activity Sheet](processes/analyticalProcesses)
+* [Incomplete Cognitive Model (Analytical Processes)](resources/incompleteAnalyticalProcesses)
+* [Second Log File](resources/secondLogFile).
+
+---
+### Class collective development of Analytical Processes
+The aim is for the class to broadly devise the analytical processes that are pertinent to the previously defined class-wide Cognitive Task Model for information processing in digital investigations.
+
+#### Instructions
+The lecturer or instructor should:
+
+1. Use a [random number generator](https://www.google.com/search?q=random+number+generator) to randomly select pairs to present. The lecturer may favour to select pairs on what they have observed, rather than randomly, to demonstrate and discuss with the entire class any novel insights or gaps in understanding.
+
+2. Present the starting and ending point for most digital investigation in terms of information processing, i.e. external data sources and presentation of the case, complemented with the initial and final abstraction processes.
+
+3. Advise the class that they are going to collectively devise the abstractions processes between each cognitive step though .
+
+4. Remind and discuss with the class the wider aim of abstraction processes in information process is to abstract from external data sources to higher-level understanding.
+
+5. Begin with consideration of the initial step in the Cognitive Task Model, notionally the consideration of external data sources.
+
+6. Reposition the Cognitive Task Model as a staircase and then ask the class for appropriate processes that would fit to progress up the staircase.
+
+7. Shape discussion as likely to receive many different suggestions. Having said that, the lecturer will want to note the others in front of the class as to use them later. For example, by recording them on a whiteboard.
+
+8. Continue in the approach until the most significant abstraction processes are detailed. It is not a concern if all are not documented or some are incomplete as a debriefing session follows the activity.
+
+9. Use an audience response system, such [Mentimeter](https://www.mentimeter.com), to consider each step and to ensure the majority of the class collectively agrees on the steps.
+
+10. Conclude the session with a complete, class generated Cognitive Task Model with analytical processes.
+
+
+9. Before moving onto to consider processes at various steps the lecturer should seek confirmation from the class. Lecturers may want to consider an audience response system, such as [Mentimeter](https://www.mentimeter.com).
+
+10. The lecturer should then conclude the session with a complete, class generated task model with processes from all the case studies considered.
+
+#### Materials
+* [Mentimeter](https://www.mentimeter.com)
+* [Random Number Generator](https://www.google.com/search?q=random+number+generator)
+
+---
+### Cognitive Task Model with Analytical Processes
+The class observe the third layer of the Cognitive Task Model, that is with key steps, abstraction processes and analytical processes. Pairs should be advise to compare and contrast the similarities and differences between the presented model and the model produced in class.
+
+
+#### Instructions
+The lecturer or instructor should:
+
+1. Present the Cognitive Task Model with abstraction processes, specifically the [Pirolli & Card model from CyBOK](https://www.cybok.org/media/downloads/Forensics_v1.0.1.pdf).
+
+2. Ask learners to spend a few minutes to reflect on the differences between the model presented, the class wide generated model and their own pair model.
+
+3. Provide an opportunity for learners to address questions and/or address any misconceptions.
+
+#### Materials
+* [Pirolli & Card model from CyBOK](https://www.cybok.org/media/downloads/Forensics_v1.0.1.pdf).
+
+---
+## Loops
+The **THIRD** block of activities is designed to afford learners the opportunity to identify the two primary analytical loops employed by investigators to improve understanding as well as gather more evidence.
+
+* **Analytical loops.** Instructor provides a brief lecture on the primary analytical loops employed by investigators.
+
+* **Refining task model with analytical loops.**  Learners are expected to identify and discuss various analytical loops that support investigators.
+
+* **Class collective development of Analytical Loops.** The class collectively discuss and debate the various possible analytical loops.
+
+---
+
+### Overview of Analytical Loops
+The session begins with a brief lecture on the high frequency iterative analytical loops that investigators perform to strengthen their case.
+
+Learners will use this material as well as consideration of the case study to intimately consider the analytical loops used in digital investigations.
+
+#### Instructions
+The lecturer or instructor should:
+
+1. Present their own analytical loops lecture or provide it in advance for students to consider.
+
+2. Permit time for questions to address any misconceptions or issues with the material presented.
+
+3. Advise learners that they should have completed the entry ticket activity and have the output from the activity with them.
+
+---
+
+### Refining task model with analytical loops
+Learners revisit the Cognitive Task Model devised from the previous activities. Pairs now consider the high-frequency iterative loops employed by investigators to strengthen their case.
+
+#### Instructions
+
+The lecturer or instructor should:
+
+1. Issue the incomplete class-wide task model with key steps and processes that has been generated from previous activities.
+
+2. Advise learners to consider the material on analytical loops that investigators would employ to strengthen their case.
+
+3. Ask learners to consider the case and identify
+a point where the investigator may have developed an initial theory but had no supporting data.
+
+4. Ask pairs when that is likely to occur within the information processing process.
+
+5. Pairs should then annotate the Cognitive Task Model with the relevant analytical loop.
+
+6. Pairs should then consider a the case and consider a point where the investigator encountered fragments of evidence but was unsure what connected them.
+
+7. Pairs should then consider when that is likely to occur within the information processing process in the digital investigation and what actions did the investigator perform.
+
+8. Pairs should then annotate the task model with the relevant analytical loop.
+
+9. Collect the annotated Cognitive Task Model from pairs.
+
+---
+
+### Class collective development of Analytical Loops
+The aim is for the class to broadly devise the analytical processes that are pertinent to the previously defined class-wide Cognitive Task Model for information processing in digital investigations.
+
+#### Instructions
+
+The lecturer or instructor should:
+
+1. Use a [random number generator](https://www.google.com/search?q=random+number+generator) to randomly select pairs to present. The lecturer may favour to select pairs on what they have observed, rather than randomly, to demonstrate and discuss with the entire class any novel insights or gaps in understanding.
+
+2. Ask for example where the investigator may have developed an initial theory but had no supporting data.
+
+3. Ask if any other pair has a different suggestion or approach.
+
+4. Lecturer should then ask the pair that presented the example, what the investigator actually did or what the pair felt they likely did, if it not clear.
+
+5. Discuss with class at what point such activity is likely to happen within the Cognitive Task Model and achieve consensus. Lecturer may consider using audience participation tools, such as [Mentimeter](https://www.mentimeter.com).
+
+6. Lecturer should move on to consider the loop where an investigator may have data but is not clear how it relates or what it means. The lecturer can again use a [random number generator](https://www.google.com/search?q=random+number+generator) to randomly select pairs to present or select a pair on what they have observed previously.
+
+7. Ask the class what they think the investigator would do in such a situation.
+
+8. Ask if there are any other suggestions from others, before asking the presenting pair to state their
+perception.
+
+9. Discuss at what point such activity is likely to happen within the information processing process with the class and achieve consensus. Lecturer may consider using audience participation tools, such as Mentimeter.
+
+#### Useful links
+
+* [Mentimeter](https://www.mentimeter.com)
+* [Random Number Generator](https://www.google.com/search?q=random+number+generator)
+
+---
+
+## Cognitive Task Model
+The **FOURTH** block is used to conclude the active lesson plan and is focused on aligning the outcomes of the activities with material presented in the CyBOK.
+
+The [Cognitive Task Model from Pirolli & Card](https://www.cybok.org/media/downloads/Forensics_v1.0.1.pdf) is presented to the class. The lecturer should highlight the key elements and afford the opportunity to ask questions.
+
+#### Instructions
+
+The lecturer or instructor should:
+
+1. Present the Cognitive Task Model and highlight the key steps, processes and loops.
+
+2. Ask the class if they have any questions or do not any aspect of what was covered in the session.
+
+3. Ask learners to complete the Quad Fold Activity.
+
+#### Materials
+
+* [Quad Fold Activity](../../general/quadFold)
