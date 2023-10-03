@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>File Carving and Fragmentation activity</title>
+        <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="file-carving-and-fragmentation-activity">File Carving and Fragmentation activity</h1>
+<p>The aim of the activity pack is for individuals to develop an initial awareness of the fundamental theory and concepts surrounding <strong>file or content carving</strong>.</p>
+<blockquote>
+<p>File (content) carving is the process of recovering and reconstructing file content directly from block storage without using the filesystem metadata. More generally, data (structure) carving is the process of reconstructing logical objects (such as files and database records) from a bulk data capture (disk/RAM image) without using metadata that describes the location and layout of the artifacts. <a href="https://www.cybok.org/media/downloads/Forensics_v1.0.1.pdf">CyBOK Forensics Knowledge Area P(19)</a></p>
+</blockquote>
+<h2 id="aims-outcomes-and-opportunities">Aims, outcomes and opportunities</h2>
+<h3 id="aims">Aims</h3>
+<p>The aim of the activity pack is for individuals to develop an initial awareness of the fundamental theory and concepts surrounding file or content carving.</p>
+<h3 id="intended-learning-outcomes">Intended Learning Outcomes</h3>
+<p>Intended Learning Outcomes</p>
+<p>The expectation is that by the end of this activity, individuals will be able to:</p>
+<ol>
+<li>
+<p>demonstrate an awareness of how files are represented conceptually in a filesystem;</p>
+</li>
+<li>
+<p>devise algorithms for the storage, retrieval, deletion and insertion of file elements;</p>
+</li>
+<li>
+<p>anticipate the significance of understanding file system utilised by a system in terms of recovery of data for forensic purposes.</p>
+</li>
+</ol>
+<h3 id="skills-development">Skills development</h3>
+<p>The expectation is that this activity will afford the following skills development opportunities:</p>
+<ol>
+<li>
+<p>to be completed.</p>
+</li>
+<li>
+<p>to be completed.</p>
+</li>
+</ol>
+<h2 id="activity">Activity</h2>
+<p>To be completed</p>
+<h3 id="materials">Materials</h3>
+<ul>
+<li>Files (File A, File B, File C)</li>
+<li>File System Containers</li>
+</ul>
+<h3 id="preparation">Preparation</h3>
+<p>Learners are required to form pairs.</p>
+<h3 id="task-1-no-fragmentation-file-content-carving">Task 1: No fragmentation file content carving.</h3>
+<p>Learners should form pairs, but for the first task partners will individually consider and devise an algorithm to <em>carve</em> file content from a file system that exhibits no fragmentation.</p>
+<h4 id="11-preparing-the-file-system">1.1: Preparing the file system.</h4>
+<p>In advance of devising a solution to carve such a file, pairs should:</p>
+<ol>
+<li>
+<p>A partner should take File A, B and C and the other partner should take File D, E and F. Each partner should use the scissors and follow the cutting guidelines to segment the files into <code>file blocks</code>.</p>
+</li>
+<li>
+<p>Partners should then identify the <strong>FIRST</strong> file block for each file, flip each of them over and write the label <code>FF D8 FF</code> on the back. Similarly, partners should then identify the <strong>LAST</strong> file block for each file, flip them over and write the label <code>FF D9</code>.</p>
+</li>
+<li>
+<p>Partners should then take all the remaining file blocks for each file, ensure they are in sequence and flip them over and write their corresponding number on the back, for example: the second file block for each file should be labelled <code>2</code>, the third <code>3</code> and so and so forth until the penultimate file block for each file.</p>
+</li>
+<li>
+<p>Partners should then arrange each of the file blocks on the <em>File System Container</em> as illustrated in <strong>Figure 1</strong>. Partners should place them in the correct sequence and then flip each over so that the file content is visible.</p>
+</li>
+</ol>
+<h4 id="12-devising-and-executing-a-file-content-carving-algorithm">1.2: Devising and executing a file content carving algorithm.</h4>
+<p>Learners are now ready to consider and devise an algorithm to carve file content. Learners should:</p>
+<ol>
+<li>
+<p>Learners exchange their completed File System Containers with file blocks with their partners.</p>
+</li>
+<li>
+<p>Learners should spend no more than <strong>15 minutes</strong> devising an algorithm alone to recover each of the files from the received File System Container.</p>
+</li>
+<li>
+<p>After <strong>15 minutes</strong> learners should exchange their algorithm and File System Container with partners. Learners should ensure the File System Container is returned the same as they received it.</p>
+</li>
+<li>
+<p>Learners should spend no more than <strong>5 minutes</strong> slavishly follow the algorithm and recover the files from the File System Containers.</p>
+</li>
+</ol>
+<h3 id="task-2-bifragmented-file-content-carving">Task 2: Bifragmented file content carving</h3>
+<p>Pairs should now form groups, but for the second task pairs will consider and devise an algorithm to <em>carve</em> file content that is bifragmented on a file system.</p>
+<h4 id="21-preparing-the-file-system">2.1: Preparing the file system.</h4>
+<p>If pairs have completed Task 1.1, then they can skip to Step 4.</p>
+<ol>
+<li>
+<p>One of the pairs should take File A and C and the other pair should take File B and D. Pairs should use the scissors and follow the cutting guidelines to segment the files into <code>file blocks</code>.</p>
+</li>
+<li>
+<p>Pairs should then identify the <strong>FIRST</strong> file block for each file, flip each of them over and write the label <code>FF D8</code> on the back. Similarly, partners should then identify the <strong>LAST</strong> file block for each file, flip them over and write the label <code>FF D9</code>.</p>
+</li>
+<li>
+<p>Pairs should then take all the remaining file blocks for each file, ensure they are in sequence and flip them over and write their corresponding number on the back, for example: the second file block for each file should be labelled <code>2</code>, the third <code>3</code> and so and so forth until the penultimate file block for each file.</p>
+</li>
+<li>
+<p>Pairs should then arrange each of the file blocks on the <em>File System Container</em> as illustrated in <strong>Figure 2</strong>. Pairs should place them in the correct sequence and then flip each over so that the file content is visible.</p>
+</li>
+</ol>
+<h4 id="22-devising-and-executing-a-file-content-carving-algorithm">2.2: Devising and executing a file content carving algorithm.</h4>
+<p>Pairs are now ready to consider and devise an algorithm to carve file content. Pairs should:</p>
+<ol>
+<li>
+<p>Pairs exchange their completed File System Containers with file blocks with the other pair.</p>
+</li>
+<li>
+<p>Pairs should spend no more than <strong>15 minutes</strong> devising an algorithm with their partner to recover the first file, i.e. File A or File C, from the received File System Container. Hint: consider and focus presented by irrelevant file content.</p>
+</li>
+<li>
+<p>After <strong>15 minutes</strong> pairs should exchange their algorithm and File System Container with the other pair. Pairs should ensure the File System Container is returned the same as they received it.</p>
+</li>
+<li>
+<p>Pairs should spend no more than <strong>5 minutes</strong> slavishly follow the algorithm and recover the files from the File System Containers.</p>
+</li>
+</ol>
+<h3 id="task-3--interleaved-file-content-carving">Task 3 : Interleaved file content carving.</h3>
+<p>For the third task, groups will consider and devise an algorithm to <em>carve</em> file content that is interleaved with multiple files.</p>
+<h4 id="31-preparing-the-file-system">3.1: Preparing the file system.</h4>
+<p>If groups have completed Task 1.1, then they can skip to Step 4. JPEG and RTF</p>
+<ol>
+<li>
+<p>Groups should take File A and B. Groups should use the scissors and follow the cutting guidelines to segment the files into <code>file blocks</code>.</p>
+</li>
+<li>
+<p>Groups should then identify the <strong>FIRST</strong> file block for each file, flip each of them over and write the label <code>FF D8 FF</code> on the back. Similarly, groups should then identify the <strong>LAST</strong> file block for each file, flip them over and write the label <code>FF D9</code>.</p>
+</li>
+<li>
+<p>Groups should then take all the remaining file blocks for each file, ensure they are in sequence and flip them over and write their corresponding number on the back, for example: the second file block for each file should be labelled <code>2</code>, the third <code>3</code> and so and so forth until the penultimate file block for each file.</p>
+</li>
+<li>
+<p>Groups should then arrange each of the file blocks on the <em>File System Container</em> as illustrated in <strong>Figure 3</strong>. Groups should place them in the correct sequence and then flip each over so that the file content is visible.</p>
+</li>
+</ol>
+<h4 id="23-devising-and-executing-a-file-content-carving-algorithm">2.3: Devising and executing a file content carving algorithm.</h4>
+<p>Groups are now ready to consider and devise an algorithm to carve file content. Groups should:</p>
+<ol>
+<li>
+<p>Groups should spend no more than <strong>15 minutes</strong> devising an algorithm to recover each of the files from the prepared File System Container. Hint: recognise that in this example each file block can only belong to one file.</p>
+</li>
+<li>
+<p>Groups should produce a slide that outlines their algorithm and any assumptions the decisions you have made.</p>
+</li>
+</ol>
+<h3 id="task-4-firm-stump-stump">Task 4: Firm stump stump</h3>
+<p>the aim is for the group to stump others</p>
+<p>select four files from the set</p>
+<p>produce a realistic system, document and provide rationale</p>
+<p>exchange with another group</p>
+<p>15 minutes</p>
+<p>recover the files</p>
+<p>document and write what you think about the scenario</p>
+<p>teams present their solition and other groups feedback what they think about</p>
+<p>class vote on the best one</p>
+
+        
+        
+    </body>
+    </html>

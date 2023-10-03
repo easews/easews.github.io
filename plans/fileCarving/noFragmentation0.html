@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>No fragmentation file content carving&period;</title>
+        <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="no-fragmentation-file-content-carving">No fragmentation file content carving.</h1>
+<h2 id="overview">Overview</h2>
+<p>Learners should form pairs, but for the first task partners will individually consider and devise an algorithm to <em>carve</em> file content from a file system that exhibits <strong>no fragmentation</strong>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="file:////Users/josephmaguire/Library/CloudStorage/OneDrive-UniversityofGlasgow/External/Scholarship/CyBOK Project/CyBOK 2 Project/Deliverables/markdown/fileCarving/images/noFragmentation.png" alt="image"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Figure 1: Contiguous file content with no fragmentation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="materials">Materials</h3>
+<ul>
+<li><a href="fileA.html">File A</a></li>
+<li><a href="fileB.html">File B</a></li>
+<li><a href="fileC.html">File C</a></li>
+<li><a href="fileD.html">File D</a></li>
+<li><a href="fileE.html">File E</a></li>
+<li><a href="fileF.html">File F</a></li>
+<li><a href="fileSignatures.html">File Signatures</a></li>
+</ul>
+<h3 id="task-1-preparing-the-file-system">Task 1: Preparing the file system.</h3>
+<p>In advance of devising a solution to carve such a file, pairs should:</p>
+<ol>
+<li>
+<p>A partner should take File A, B and C and the other partner should take File D, E and F. Each partner should use the scissors and follow the cutting guidelines to segment the files into <code>file blocks</code>.</p>
+</li>
+<li>
+<p>Partners should then identify the <strong>FIRST</strong> file block for each file, flip each of them over and write the label <code>FF D8 FF</code> on the back. Similarly, partners should then identify the <strong>LAST</strong> file block for each file, flip them over and write the label <code>FF D9</code>.</p>
+</li>
+<li>
+<p>Partners should then take all the remaining file blocks for each file, ensure they are in sequence and flip them over and write their corresponding number on the back, for example: the second file block for each file should be labelled <code>2</code>, the third <code>3</code> and so and so forth until the penultimate file block for each file.</p>
+</li>
+<li>
+<p>Partners should then arrange each of the file blocks on the <em>File System Container</em> as illustrated in <strong>Figure 1</strong>. Partners should place them in the correct sequence and then flip each over so that the file content is visible.</p>
+</li>
+</ol>
+<h3 id="task-2-devising-and-executing-a-file-content-carving-algorithm">Task 2: Devising and executing a file content carving algorithm.</h3>
+<p>Learners are now ready to consider and devise an algorithm to carve file content. Learners should:</p>
+<ol>
+<li>
+<p>Learners exchange their completed File System Containers with file blocks with their partners.</p>
+</li>
+<li>
+<p>Learners should spend no more than <strong>15 minutes</strong> devising an algorithm alone to recover each of the files from the received File System Container.</p>
+</li>
+<li>
+<p>After <strong>15 minutes</strong> learners should exchange their algorithm and File System Container with partners. Learners should ensure the File System Container is returned the same as they received it.</p>
+</li>
+<li>
+<p>Learners should spend no more than <strong>5 minutes</strong> slavishly follow the algorithm and recover the files from the File System Containers.</p>
+</li>
+</ol>
+
+        
+        
+    </body>
+    </html>
